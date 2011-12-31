@@ -1,0 +1,106 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC2::Manage Personal Details</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC2::Manage Personal Details</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">This use-case describes the process whereby a user views and updates their personal demographic details stored on the system.</div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.6</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">01 Jan 2006 ;</span> <span class="value">Initial Revision</span></li>
+                  <li><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">23 May 2006 ;</span> <span class="value">Upgraded to version 0.2</span></li>
+                  <li><span class="property">1.3</span><span class="value">odlingsmee;</span> <span class="value">19 Mar 2007 ;</span> <span class="value">Upgraded to version 0.3</span></li>
+                  <li><span class="property">1.5</span><span class="value">odlingsmee;</span> <span class="value">19 Mar 2007 ;</span> <span class="value">Add links to specific requirements</span></li>
+                  <li class="last"><span class="property">1.6</span><span class="value">odlingsmee;</span> <span class="value">17 Jan 2010 ;</span> <span class="value">Assigned to release-1</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">The user's personal information has changed or the user notices that the information held by the system is inaccurate or the
+                        user wishes to browse what information the system holds about them.</span></li>
+                  <li><span class="property">Goal</span><span class="value">To allow the user to view and (where necesary) update their information on the system</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#user">User</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The user will be <a href="UC1.html">[UC1] Logged On</a>.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The user's details will have been updated on the system.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The user will have been informed of the validation or techinical issues that prevented the update from being successful</span></li>
+                  <li><span class="property">Priority</span><span class="value">1</span></li>
+                  <li><span class="property">Complexity</span><span class="value">1</span></li>
+                  <li><span class="property">target release</span><span class="value"> release-1</span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">admin</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="navigate-to-personal-info">The user navigates to the personal information screen.</li>
+                  <li id="present-personal-info">The system <a href="requirements.html#RQ21">[RQ21] presents the user's personal information to them</a>.
+                  </li>
+                  <li id="select-edit">The user notices that the information is incorrect and selects the "edit" option.</li>
+                  <li id="present-editable-view">The presents the user with an <a href="requirements.html#RQ22">[RQ22] editable</a> view of their <a href="requirements.html#RQ8">[RQ8] personal information</a>. The editable fields include: <a href="requirements.html#RQ9">[RQ9] first name</a>; <a href="requirements.html#RQ10">[RQ10] last name</a>and <a href="requirements.html#RQ11">[RQ11] address</a>.
+                  </li>
+                  <li id="edit-details">The user edits their details as appropriate</li>
+                  <li id="submit-details">The user submits the updated details to the system.</li>
+                  <li id="validate-details">The system validates that the details provide were <a href="requirements.html#RQ12">[RQ12] allowable</a>.
+                  </li>
+                  <li id="save-details">The system saves the new details and presents the updated information back to the user in a read-only view.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Alternative Flows</div>
+            <div class="heading3">No changes to make</div>
+            <div class="sequence" id="no-changes-to-make">
+               <p>At step <a href="#select-edit">3 of the Main flow</a> when the user does not want to make changes
+               </p>
+               <ol>
+                  <li id="no-changes">The user decides not to make any updates.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading3">Validation Errors</div>
+            <div class="sequence" id="validation-errors">
+               <p>At step <a href="#submit-details">6 of the Main flow</a> when the system finds that the new data entered fails validation
+               </p>
+               <ol>
+                  <li id="validation-error-results">The system presents the user with the details of the one or more validation errors that were encountered.</li>
+                  <li>The flow of events continues from step <a href="#edit-details">5 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading2">Exception Flows</div>
+            <div class="heading3">Record Update Error</div>
+            <div class="sequence" id="save-failed">
+               <p>At step <a href="#save-details">8 of the Main flow</a> when there is an error updating the datastore
+               </p>
+               <ol>
+                  <li id="update-failure">The system cannot update the user's record because of an technical issue</li>
+                  <li id="inform-user">The system informs the user of the issue</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Specific Requirements</div>
+            <div id="use-case-business-rules">
+               <ul>
+                  <li><span class="property">[<a href="requirements.html#RQ21">RQ21</a>] View personal demographic  information:</span><span class="value">The system shall allow the user to view the demographic information it holds about them. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ22">RQ22</a>] Edit personal demographic information:</span><span class="value">The system shall allow the user to edit their personal demographic information. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ8">RQ8</a>] Personal Information:</span><span class="value">The system shall store certain personal information about each user on the system. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ9">RQ9</a>] First Name:</span><span class="value">The system shall store a first name against each user. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ10">RQ10</a>] Last Name:</span><span class="value">The system shall store a last name against each user. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ11">RQ11</a>] Address:</span><span class="value">The system shall store an address against each user. (proposed)</span></li>
+                  <li class="last"><span class="property">[<a href="requirements.html#RQ12">RQ12</a>] Names fields:</span><span class="value">Name fields should be at least one character in length. (proposed)</span></li>
+               </ul>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:30:54 +10:30
+         </div>
+      </div>
+   </body>
+</html>

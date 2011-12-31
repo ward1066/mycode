@@ -1,0 +1,140 @@
+body {
+	background-image: url(images/background.gif);
+    font-family: Arial,Verdana,Sans-serif;
+    font-size: 9pt;
+    color:#666;
+    height:9px;
+}
+
+a:link, a:visited, a:active { 
+	text-decoration: none; color:#FF9900;
+}
+a:hover { 
+	text-decoration: underline; color:#FFCC99;
+}
+
+h1, .heading1 {
+    font-size: 14pt;    
+    text-align: center;
+    font-weight: bold;
+    color:#FF9900;
+}
+
+h2, .heading2 {
+	margin-top: 10px;
+	margin-left: 8%;
+	padding:5px;
+	padding-left: 0px;
+    padding-top: 2px;
+    margin-right: 10%;
+    font-size: 12pt;
+    height:18px;
+	border:#ddd 1px solid;
+	text-align: left;
+	background-color:#eee;
+	color:#FF9900;
+}
+h3, .heading3 {
+	margin-left: 8%;
+	padding:5px;
+	padding-left: 0px;
+    padding-top: 2px;
+    margin-right: 10%;
+    height:16px;
+	border:#ddd 1px solid;
+	border-top: 0px;
+	border-bottom: 0px;
+	text-align: left;
+	font-size:10pt;
+	color:#FF9900;
+}
+
+.sequence p {
+	padding:3px;
+}
+
+#use-case-description, p.emphasis {
+    margin-left: 8%;
+    margin-right: 10%;   
+    border:#ddd 1px solid;
+    padding:3px;
+}
+
+.actor, .stakeholder {
+    margin-left: 8%;
+    margin-right: 10%;   
+    border:#ddd 1px solid;
+    border-top: 0px;
+    padding:3px;
+}
+
+.sequence {
+    border:#ddd 1px solid;
+}
+
+#use-case-properties ul, #stakeholder-list ul, #use-case-business-rules ul, #document-history ol, #document-information ul, #index ul, #glossary ul {
+    border:#ddd 1px solid;
+}
+
+#use-case-properties li, #stakeholder-list li, #use-case-business-rules li, #document-history li, , #document-information li, #index li, #glossary li {
+    border-bottom: solid #eee 1px;
+    padding: 3px;
+    padding-right: 0px;
+}
+
+#use-case-properties li.last, #stakeholder-list li.last, #use-case-business-rules li.last, #document-history li.last, #document-information li.last, #glossary li.last {
+	border-bottom: 0px;
+}
+
+.property {
+    font-weight: bold;
+    text-align: left;
+}
+
+.value {
+	text-align: left;
+}
+
+th {
+    background-color: #999999;
+    color: #fff;
+}
+
+tr, td, th {
+	border-color: #ddd;
+}
+
+td.even, td {
+	background-color: #eee;
+}
+
+table.standard {
+    border: solid #ddd 1px;
+}
+
+table.standard th, table.standard td, , table.standard tr {
+   border: solid #ddd 1px;
+}
+
+table.standard tr {
+  background-color: #eee;
+}
+
+.req-detail {
+    align: top;
+	background-color:#FFFFFF;
+}
+
+li.req-detail {
+    border-bottom: 1px solid #cccccc;
+}
+
+.bar-colour-1 {
+    background-color:#999999;
+	border: 0pt;
+}
+
+.bar-colour-2 {
+    background-color:#FFCC99;
+	border: 0pt;
+}

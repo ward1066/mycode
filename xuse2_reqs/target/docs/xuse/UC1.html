@@ -1,0 +1,114 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC1::Logon</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC1::Logon</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">This use-case describes the sequence of events necessary to logon to the system</div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.7</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">01 Jan 2006 ;</span> <span class="value">Initial Revision</span></li>
+                  <li><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">23 May 2006 ;</span> <span class="value">Upgraded to version 0.2</span></li>
+                  <li><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">07 Aug 2006 ;</span> <span class="value">Added new alternate flow for scenario where max attempts has been exceeded.</span></li>
+                  <li><span class="property">1.4</span><span class="value">odlingsmee;</span> <span class="value">19 Mar 2007 ;</span> <span class="value">Upgraded to version 0.3</span></li>
+                  <li><span class="property">1.6</span><span class="value">odlingsmee;</span> <span class="value">29 Sep 2009 ;</span> <span class="value">Fixed condition for exhausted attempts alternate flow.</span></li>
+                  <li class="last"><span class="property">1.7</span><span class="value">odlingsmee;</span> <span class="value">17 Jan 2010 ;</span> <span class="value">Assigned to release-1</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">The actor wishes to access the web application</span></li>
+                  <li><span class="property">Goal</span><span class="value">For users to gain legitimate access to the system</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#user">User</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The user shall be previously registered with the system such that appropriate security credentials are held by the system.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The user will have logged on and be granted access permissions as dictated by the configuration in the system.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The user will not have been granted access to the system - a security administrator will have been informed of repeated failures.</span></li>
+                  <li><span class="property">Priority</span><span class="value">1</span></li>
+                  <li><span class="property">Complexity</span><span class="value">1</span></li>
+                  <li><span class="property">target release</span><span class="value"> release-1</span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">security</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="go-to-logon">The user navigates to the <a href="requirements.html#RQ13">[RQ13] web</a> logon screen.
+                  </li>
+                  <li id="present-challenge">The system <a href="requirements.html#RQ3">[RQ3] challenges</a> the user for a <a href="requirements.html#RQ1">[RQ1] username</a> and <a href="requirements.html#RQ2">[RQ2] password</a>.
+                  </li>
+                  <div class="annotation" onMouseOut="javascript:toggleAnnotation('d344e98', 'd344e98-button')" onMouseOver="javascript:toggleAnnotation('d344e98', 'd344e98-button')" id="d344e98-button" style="border-bottom: 1px solid #666; zIndex: auto;">
+                     <div class="annotation-header"><span class="value">odlingsmee;</span>; 2006-01-21
+                     </div>
+                     <div class="annotation-content" id="d344e98" style="display: none;"><span class="property">step3</span>We need to make sure that the website will <a href="requirements.html#RQ6">[RQ6] support SSL encryption</a> such that the user's details are not transmitted in plain text across the web
+                     </div>
+                  </div>
+                  <li id="enter-details">The user enters their credentials and submits them to the system.</li>
+                  <li id="lookup-auth-details">The system validates that the username and password credentials match those stored.</li>
+                  <li id="lookup-up-permissions">The system loads up the set of <a href="requirements.html#RQ7">[RQ7] privileges appropriate to the user</a>.
+                  </li>
+                  <li id="load-home-page">The system presents the homepage to the user.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Alternative Flows</div>
+            <div class="heading3">Accessing a protected page directly</div>
+            <div class="sequence" id="direct-page-access">
+               <p>At step <a href="#go-to-logon">1 of the Main flow</a> when The user attempts to access a protected resource but is not logged on or their session has expired
+               </p>
+               <ol>
+                  <li id="direct-nav">The user navigates directly to a screen within the system website</li>
+                  <li id="redirect-to-logon">The system re-directs the user to the logon screen.</li>
+                  <li>The flow of events continues from step <a href="#present-challenge">2 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading3">Invalid Credentials</div>
+            <div class="sequence" id="invalid-credentials">
+               <p>At step <a href="#lookup-auth-details">4 of the Main flow</a> when Credentials supplied are not valid
+               </p>
+               <ol>
+                  <li id="invalid-logon">The system determines that the user is still within their <a href="requirements.html#RQ5">[RQ5] permitted logon attempts</a></li>
+                  <li id="redirect-to-logon-for-another-attempt">The system re-directs the user to the logon screen.</li>
+                  <li>The flow of events continues from step <a href="#present-challenge">2 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading3">Invalid Credentials - number of attempts exceeded</div>
+            <div class="sequence" id="invalid-credentials-attempts-exceeded">
+               <p>At step <a href="#lookup-auth-details">4 of the Main flow</a> when Credentials supplied are not valid and permissible number of attempts exceeded
+               </p>
+               <ol>
+                  <li id="invalid-logon-on-last-try">The system determines that the user has exhausted their <a href="requirements.html#RQ5">[RQ5] permitted logon attempts</a></li>
+                  <li id="redirect-to-authentication-failure-screen">The system re-directs the user to an authentication failure screen.</li>
+                  <li id="inform-administrator">The system alerts the administrator of the failed logon attempts.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Specific Requirements</div>
+            <div id="use-case-business-rules">
+               <ul>
+                  <li><span class="property">[<a href="requirements.html#RQ13">RQ13</a>] Web UI:</span><span class="value">The user interface shall be a web based (HTTP) user interface to ease deployment and accesibility. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ3">RQ3</a>] Authentication:</span><span class="value">Authentication shall be established based on the correct username and password combination. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ1">RQ1</a>] Unique Username:</span><span class="value">The system shall identify users via a unique username. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ2">RQ2</a>] Password:</span><span class="value">The system shall store passwords against each username. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ6">RQ6</a>] SSL Encryption:</span><span class="value">The system's website should support SSL Encryption to prevent data being sniffed by malicious parties. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ7">RQ7</a>] Authorisation:</span><span class="value">The system shall store permissions against each user such that their level of access to the system can be controlled. (proposed)</span></li>
+                  <li class="last"><span class="property">[<a href="requirements.html#RQ5">RQ5</a>] Failed Logons:</span><span class="value">If a logon attempt is unsuccesful the system shall inform the user, however specfic reasons for the failure shall not be communicated
+                        as this information can prove useful for malicious authentication attempts. (proposed)</span></li>
+               </ul>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:30:54 +10:30
+         </div>
+      </div>
+   </body>
+</html>

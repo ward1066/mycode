@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:requirements xmlns:xuse="http://xuse.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xuse.sourceforge.net ../../xusexsds/requirements.xsd" model-version="0.3">
+  <xuse:req strength="shall" id="RQ0" version="1.5" creation-date="2006-05-21" modification-date="2009-12-15T18:11:42">
+    <xuse:title>Secured Logon</xuse:title>
+    <xuse:description>The system shall prevent un-authorised access to a user's account.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="marketing" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ1" version="1.8" creation-date="2006-05-21" modification-date="2009-12-15T18:14:19">
+    <xuse:title>Unique Username</xuse:title>
+    <xuse:description>The system shall identify users via a unique username.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ0" />
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="user" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ2" version="1.8" creation-date="2006-05-21" modification-date="2009-12-15T18:12:52">
+    <xuse:title>Password</xuse:title>
+    <xuse:description>The system shall store passwords against each username.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ0" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="security" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ3" version="1.3" creation-date="2006-05-21" modification-date="2009-12-15T18:08:18">
+    <xuse:title>Authentication</xuse:title>
+    <xuse:description>Authentication shall be established based on the correct username and password combination.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ0" />
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="user" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ4" version="1.1" creation-date="2006-05-21" modification-date="2006-05-23">
+    <xuse:title>Password Structure</xuse:title>
+    <xuse:description>The system shall only allow passwords greater than eight characters long being a mixture of alpha-numerics.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ2" />
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="user" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ5" version="1.2" creation-date="2006-05-21" modification-date="2009-12-15T18:13:16">
+    <xuse:title>Failed Logons</xuse:title>
+    <xuse:description>If a logon attempt is unsuccesful the system shall inform the user, however specfic reasons for the failure shall not be communicated as this information can prove useful for malicious authentication attempts.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ3" />
+    <xuse:stakeholder-ref refId="security" />
+  </xuse:req>
+  <xuse:req strength="should" id="RQ6" version="1.1" creation-date="2006-05-21" modification-date="2006-05-23">
+  
+    <xuse:annotation>
+      <xuse:description>
+            TLS should probably be used in preference to SSL
+            - this is still under investigation.
+      </xuse:description>
+      <xuse:author>odlingsmee</xuse:author>
+      <xuse:intended-audience>internal</xuse:intended-audience>
+      <xuse:creation-date>2006-05-23</xuse:creation-date>
+      <xuse:comments>
+        <xuse:comment>
+          <xuse:description>
+                It has been concluded that TLS should be used, however
+                the SSL is a term that it is familiar to the customer -
+                as such the requirement has not been modified.
+          </xuse:description>
+          <xuse:comment-author>fred</xuse:comment-author>
+          <xuse:comment-date>2010-02-09</xuse:comment-date>
+        </xuse:comment>
+      </xuse:comments>
+    </xuse:annotation>
+    
+    <xuse:title>SSL Encryption</xuse:title>
+    <xuse:description>The system's website should support SSL Encryption to prevent data being sniffed by malicious parties.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authentication</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ7" version="1.3" creation-date="2006-05-21" modification-date="2009-12-15T18:37:28">
+    <xuse:title>Authorisation</xuse:title>
+    <xuse:description>The system shall store permissions against each user such that their level of access to the system can be controlled.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authorisation</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="security" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ8" version="1.0" creation-date="2006-05-21" modification-date="2006-05-21">
+    <xuse:title>Personal Information</xuse:title>
+    <xuse:description>The system shall store certain personal information about each user on the system.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="marketing" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ9" version="1.0" creation-date="2006-05-21" modification-date="2006-05-21">
+    <xuse:title>First Name</xuse:title>
+    <xuse:description>The system shall store a first name against each user.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ10" version="1.0" creation-date="2006-05-21" modification-date="2006-05-21">
+    <xuse:title>Last Name</xuse:title>
+    <xuse:description>The system shall store a last name against each user.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ11" version="1.0" creation-date="2006-05-21" modification-date="2006-05-21">
+    <xuse:title>Address</xuse:title>
+    <xuse:description>The system shall store an address against each user.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ12" version="1.0" creation-date="2006-05-21" modification-date="2006-05-21">
+    <xuse:title>Names fields</xuse:title>
+    <xuse:description>Name fields should be at least one character in length.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>data</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+    <xuse:req-ref refId="RQ9" />
+    <xuse:req-ref refId="RQ10" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ13" version="1.1" creation-date="2006-08-07" modification-date="2009-12-15T17:54:56">
+    <xuse:title>Web UI</xuse:title>
+    <xuse:description>The user interface shall be a web based (HTTP) user interface to ease deployment and accesibility.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>gui</xuse:package>
+    </xuse:classification>
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ14" version="1.1" creation-date="2009-09-30" modification-date="2009-12-15T18:39:13">
+    <xuse:title>Multi-currency support</xuse:title>
+    <xuse:description>The application shall support multiple-currencies.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+    </xuse:classification>
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ15" version="1.0" creation-date="2009-09-30" modification-date="2009-09-30">
+    <xuse:title>USD currency support</xuse:title>
+    <xuse:description>The application shall support payment in USD ($).</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ14" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ16" version="1.0" creation-date="2009-09-30" modification-date="2009-09-30">
+    <xuse:title>GBP currency support</xuse:title>
+    <xuse:description>The application shall support payment in GBP (£).</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ14" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ17" version="1.1" creation-date="2009-09-30" modification-date="2009-12-15T17:42:37">
+    <xuse:title>Euro currency support</xuse:title>
+    <xuse:description>The application shall support payment in Euro ().</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ14" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ18" version="1.1" creation-date="2009-09-30" modification-date="2009-12-15T18:45:29">
+    <xuse:title>Shopping cart running total</xuse:title>
+    <xuse:description>The application shall calculate a running total of all the products in the shopping cart. This will not include shipping or gift wrap costs.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ26" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ19" version="1.3" creation-date="2009-09-30" modification-date="2009-12-15T18:46:14">
+    <xuse:title>Shopping cart default quantities</xuse:title>
+    <xuse:description>When products are added to the cart the system shall assume a quantity of 1 (one) is required.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ26" />
+  </xuse:req>
+  <xuse:req strength="shall" id="RQ20" version="1.0" creation-date="2009-09-30" modification-date="2009-09-30">
+    <xuse:title>Product already in cart</xuse:title>
+    <xuse:description>When a product that aleady exists is added to the shopping cart, the system shall increment the quantity by 1 (one).</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+    </xuse:classification>
+    <xuse:parent refId="RQ19" />
+  </xuse:req>
+  <xuse:req id="RQ21" version="1.14" creation-date="2009-12-15T17:53:54" modification-date="2009-12-15T18:07:25" strength="shall">
+    <xuse:title>View personal demographic  information</xuse:title>
+    <xuse:description>The system shall allow the user to view the demographic information it holds about them.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>gui</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+    <xuse:stakeholder-ref refId="user" />
+  </xuse:req>
+  <xuse:req id="RQ22" version="1.9" creation-date="2009-12-15T18:03:59" modification-date="2009-12-15T18:05:54" strength="shall">
+    <xuse:title>Edit personal demographic information</xuse:title>
+    <xuse:description>The system shall allow the user to edit their personal demographic information.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>gui</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ8" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="marketing" />
+  </xuse:req>
+  <xuse:req id="RQ23" version="1.13" creation-date="2009-12-15T18:14:46" modification-date="2009-12-15T18:38:04" strength="shall">
+    <xuse:title>Role based controls</xuse:title>
+    <xuse:description>The system shall support roles to aid with the managment of granular permissions.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authorisation</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ7" />
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="service-management" />
+  </xuse:req>
+  <xuse:req id="RQ24" version="1.6" creation-date="2009-12-15T18:18:38" modification-date="2009-12-15T18:37:13" strength="shall">
+    <xuse:title>Role multiplicity</xuse:title>
+    <xuse:description>The system shall allow a user to be associated with one or more roles. Their permissions will be the union of the permissions defined by each of their roles.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authorisation</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ23" />
+    <xuse:stakeholder-ref refId="security" />
+  </xuse:req>
+  <xuse:req id="RQ25" version="1.5" creation-date="2009-12-15T18:39:13" modification-date="2009-12-15T18:41:05" strength="shall">
+    <xuse:title>Select products for purchase</xuse:title>
+    <xuse:description>The system shall allow the buyer to select products for purchase</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+  </xuse:req>
+  <xuse:req id="RQ26" version="1.5" creation-date="2009-12-15T18:41:05" modification-date="2009-12-15T18:45:21" strength="shall">
+    <xuse:title>Shopping Cart</xuse:title>
+    <xuse:description>The system shall support the concept of a user's shopping cart such that zero or more items can be stored for purchase.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.p2p</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+  </xuse:req>
+  <xuse:req id="RQ27" version="1.5" creation-date="2009-12-15T18:48:42" modification-date="2009-12-15T18:50:44" strength="shall">
+    <xuse:title>Permission based controls</xuse:title>
+    <xuse:description>The system shall only allow access to functions that are associated with the permissions of the current user.</xuse:description>
+    <xuse:classification>
+      <xuse:type is-feature="true">non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>security.authorisation</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ7" />
+    <xuse:stakeholder-ref refId="security" />
+  </xuse:req>
+  <xuse:req id="BO-1" version="1.1" creation-date="2010-01-15" modification-date="2010-01-15" strength="shall">
+    <xuse:title>To Improve UK market share by upwards of 1.5%.</xuse:title>
+    <xuse:description>
+      Efficiencies and improved usability must allow
+      <xuse:customer />
+      to reach out more effectively to its customers to improve sales and customer retention.
+    </xuse:description>
+    <xuse:classification>
+      <xuse:type>business</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>busines-drivers</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+    <xuse:stakeholder-ref refId="marketing" />
+  </xuse:req>
+  <xuse:req id="BO-2" version="1.1" creation-date="2010-01-15" modification-date="2010-01-15" strength="shall">
+    <xuse:title>Eliminate the need to re-key web order data thus saving 2 FTE.</xuse:title>
+    <xuse:description>The solution must integrate with the backend CRM system such that manual re-keying of order information is not required.</xuse:description>
+    <xuse:classification>
+      <xuse:type>business</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>busines-drivers</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+  </xuse:req>
+  <xuse:req id="BO-3" version="1.1" creation-date="2010-01-15" modification-date="2010-01-15" strength="shall">
+    <xuse:title>Reduce vendor management overheads by 20%.</xuse:title>
+    <xuse:description>
+      Currently it is difficult for vendors that sell products via
+      <xuse:customer />
+      to track the number and payment status of orders placed via the system. Integration with the backend CRM would not only allow them to track orders and payments made via the web sales channel but also allow them to view orders placed by phone and mail.
+    </xuse:description>
+    <xuse:classification>
+      <xuse:type>business</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>busines-drivers</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+  </xuse:req>
+  <xuse:req id="SC-1" version="1.1" creation-date="2010-01-15" modification-date="2010-01-15" strength="shall">
+    <xuse:title>Achieve a 50% increase in user customer satisfaction within 6 months of go-live.</xuse:title>
+    <xuse:description>Improve buyer customer satisfaction such that they are likely to want to use the site more.</xuse:description>
+    <xuse:classification>
+      <xuse:type>success-criteria</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>busines-drivers</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+  </xuse:req>
+  <xuse:req id="SC-2" version="1.1" creation-date="2010-01-15" modification-date="2010-01-15" strength="shall">
+    <xuse:title>Achieve a 25% increase in vendor customer satisfaction within 6 months of go-live.</xuse:title>
+    <xuse:description>
+      Improve buyer customer satisfaction such that they are likely to continue to do business with
+      <xuse:customer />
+      .
+    </xuse:description>
+    <xuse:classification>
+      <xuse:type>success-criteria</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>busines-drivers</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+    <xuse:stakeholder-ref refId="vendor" />
+  </xuse:req>
+  <xuse:req id="CO-1" version="1.1" creation-date="2010-01-16" modification-date="2010-01-16" strength="shall">
+    <xuse:title>
+      <xuse:project />
+      must be built in Java
+    </xuse:title>
+    <xuse:description>
+      <xuse:project />
+      must be built in Java such that it can be maintained and extended by the in-house IT department.
+    </xuse:description>
+    <xuse:classification>
+      <xuse:type>constraint</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+  </xuse:req>
+  <xuse:req id="AS-1" version="1.1" creation-date="2010-01-16" modification-date="2010-01-16" strength="shall">
+    <xuse:title>
+      The new
+      <xuse:customer />
+      corporate branding will be availble in time for release 1
+    </xuse:title>
+    <xuse:description>The corporate barnding must be avaible prior to system test of release 1.</xuse:description>
+    <xuse:classification>
+      <xuse:type>assumption</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system</xuse:package>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="management" />
+  </xuse:req>
+  <xuse:req id="RQ28" version="1.7" creation-date="2010-01-31T12:15:02" modification-date="2010-01-31T12:24:32" strength="shall">
+    <xuse:title>Order tracking</xuse:title>
+    <xuse:description>The system shall allow orders to be tracked both buy buyers, vendors and service personnel.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:stakeholder-ref refId="marketing" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="service-management" />
+  </xuse:req>
+  <xuse:req id="RQ29" version="1.11" creation-date="2010-01-31T12:24:32" modification-date="2010-01-31T12:29:01" strength="shall">
+    <xuse:title>Associate orders with buyers</xuse:title>
+    <xuse:description>The buyer's unique username shall be associated with any order he or she places</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ28" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="service-management" />
+  </xuse:req>
+  <xuse:req id="RQ30" version="1.8" creation-date="2010-01-31T12:29:21" modification-date="2010-01-31T12:40:56" strength="shall">
+    <xuse:title>Associate order line item with a vendor</xuse:title>
+    <xuse:description>The system shall associate order line items with a vendor via a unique vendor id.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ28" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="service-management" />    
+  </xuse:req>
+  <xuse:req id="RQ31" version="1.8" creation-date="2010-01-31T12:32:07" modification-date="2010-01-31T12:38:33" strength="shall">
+    <xuse:title>Restrict list of orders</xuse:title>
+    <xuse:description>The system shall restrict the list of orders visible to the user such that they cannot review orders that are not associated with them.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ28" />
+    <xuse:stakeholder-ref refId="security" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="service-management" />    
+  </xuse:req>
+  <xuse:req id="RQ32" version="1.7" creation-date="2010-01-31T12:34:00" modification-date="2010-01-31T12:38:30" strength="shall">
+    <xuse:title>Users can only see their orders</xuse:title>
+    <xuse:description>Users shall only be allowed to see orders that they have placed</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ31" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="security" />    
+  </xuse:req>
+  <xuse:req id="RQ33" version="1.6" creation-date="2010-01-31T12:35:23" modification-date="2010-01-31T12:38:23" strength="shall">
+    <xuse:title>Vendors can only see orders associated with them</xuse:title>
+    <xuse:description>Vendors can only see orders associated with them by virtue of having one or more line items placed with them. Should the order also contain line items placed with a different vendor, these details will not be accessible.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ31" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="security" />    
+  </xuse:req>
+  <xuse:req id="RQ34" version="1.7" creation-date="2010-01-31T12:40:56" modification-date="2010-01-31T12:42:41" strength="shall">
+    <xuse:title>Service personnel can view all orders</xuse:title>
+    <xuse:description>Service personnel shall be able view all orders on the system such that can help with any support queries placed by the buyer and/or vendor.</xuse:description>
+    <xuse:classification>
+      <xuse:type>non-functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ31" />
+    <xuse:stakeholder-ref refId="service-management" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="security" />    
+  </xuse:req>
+  <xuse:req id="RQ35" version="1.8" creation-date="2010-01-31T12:43:25" modification-date="2010-01-31T12:45:20" strength="shall">
+    <xuse:title>Order list presentation order</xuse:title>
+    <xuse:description>When a user searches for orders the list should be presented with open orders first with secondary sorting being via order date in reverse chronological order (newest orders first).</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ28" />
+    <xuse:req-ref refId="RQ31" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="service-management" />
+  </xuse:req>
+  <xuse:req id="RQ36" version="1.8" creation-date="2010-01-31T12:46:06" modification-date="2010-01-31T12:49:18" strength="shall">
+    <xuse:title>Order summary data</xuse:title>
+    <xuse:description>The following should be displayed on the order summary list. Order date/time, order (overall) status, order price,  estimated compltetion date (if known), buyer and vendor details.</xuse:description>
+    <xuse:classification>
+      <xuse:type>functional</xuse:type>
+      <xuse:status>proposed</xuse:status>
+      <xuse:package>system.orders</xuse:package>
+      <xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+    </xuse:classification>
+    <xuse:parent refId="RQ28" />
+    <xuse:req-ref refId="RQ31" />
+    <xuse:stakeholder-ref refId="user" />
+    <xuse:stakeholder-ref refId="vendor" />
+    <xuse:stakeholder-ref refId="service-management" />    
+  </xuse:req>
+</xuse:requirements>
+

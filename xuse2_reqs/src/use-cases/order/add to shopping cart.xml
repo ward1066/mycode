@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC4" name="Add to shopping cart" model-version="0.3">	
+	<xuse:description>The buyer adds a selected item to the shopping cart. The item will be retained within the list of items in the cart such that it is available when the buyer has finished shopping and wishes to pay for their goods.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.1 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+			<xuse:revision>1.2</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-30</xuse:change-date>
+			<xuse:description>Added main flow</xuse:description>
+		</xuse:version>
+		<xuse:version>
+			<xuse:revision>1.3</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-30</xuse:change-date>
+			<xuse:description>Added detailed requirements associated with flow.</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.4</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A buyer see a product or service that they wish to purchase.</xuse:trigger>
+		<xuse:goal>To add the selected product to the shopping cart.</xuse:goal>
+		<xuse:primary-actor refId="buyer"/>
+		<xuse:pre-requisites>The buyer shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref> and be in the process of <xuse:uc-ref refId="UC6">viewing a product</xuse:uc-ref>.</xuse:pre-requisites>
+		<xuse:success-outcome>The buyer will have add the selected item to the shopping cart and be able to continue with their shopping.</xuse:success-outcome>
+		<xuse:failure-outcome>The merchant will not have been able to add the item to the shopping cart - the system will have generated error messages and advice as to the appropriate recourse should they still wish to purchase the item.</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="select-product">
+            <xuse:description>The buyer <xuse:req-ref refId="RQ25">the product</xuse:req-ref> they wish to add to the <xuse:req-ref refId="RQ26">shopping cart</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="add-item">
+            <xuse:description>The buyer selects the "add to cart" option</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="update-cart">
+            <xuse:description>The shopping cart is <xuse:req-ref refId="RQ19">updated</xuse:req-ref> with new product.</xuse:description>
+            <xuse:ref-alternate-flow refId="item-already-in-cart" condition="Shopping cart already contains product"/>
+        </xuse:step>
+        <xuse:step step-id="update-cart-totals">
+            <xuse:description>The <xuse:req-ref refId="RQ18">value</xuse:req-ref> of all the items is re-calculated and displayed to the buyer in their <xuse:req-ref refId="RQ14">own currency</xuse:req-ref>.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="continue-shopping">
+            <xuse:description>The buyer can <xuse:uc-ref refId="UC6">continue to browse the products</xuse:uc-ref> or <xuse:uc-ref refId="UC5">pay for the items that are in the shopping cart</xuse:uc-ref>.</xuse:description>
+        </xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:alternate-flows>
+	   <xuse:alternate-flow title="Product already in shopping cart" id="item-already-in-cart">
+	       <xuse:step step-id="update-cart-quantity">
+	           <xuse:description>As the item is already present in the shopping cart, the <xuse:req-ref refId="RQ20">quantity of the product is incremented by one</xuse:req-ref>.</xuse:description>
+	       </xuse:step>
+	       <xuse:rejoin at-step="update-cart-totals"/>
+	   </xuse:alternate-flow>
+	</xuse:alternate-flows>
+	<xuse:business-rules>
+		<xuse:req-ref refId="RQ27"/>
+	</xuse:business-rules>
+</xuse:use-case>

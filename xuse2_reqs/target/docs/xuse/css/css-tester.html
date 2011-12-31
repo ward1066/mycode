@@ -1,0 +1,445 @@
+<html>
+   <head xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::CSS tester</title>
+      <link type="text/css" href="core.css" rel="stylesheet"/>
+      <link type="text/css" href="xuse-standard.css" rel="stylesheet"/>
+      <script src="../js/script.js" type="text/javascript"></script></head>
+   <body>
+      <div id="use-case">
+         <div class="heading1">UC1::Add Requirement</div>
+         <div class="heading2">Overview</div>
+         <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="annotation">
+            <div class="annotation-header"><span class="value">odlingsmee</span>; 2006-01-21
+            </div>
+            <div class="annotation-content">This use-case describes the steps necessary to add a requirement to the XML data repository - in the future it is hoped that
+               there will be a GUI such that this does not involve the direct editing of XML.
+            </div>
+         </div>
+         <div id="use-case-description">This use-case describes the sequence of events that allows the actor to add a new requirement in the Xuse requirements repository</div>
+         <div xmlns:xs="http://www.w3.org/2001/XMLSchema" class="heading2">Document History</div>
+         <div xmlns:xs="http://www.w3.org/2001/XMLSchema" id="document-history">
+            <ol>
+               <li><span class="property">Current Version:</span><span class="value">1.5</span></li>
+               		
+               <li>
+                  			<span class="property">1.1:</span>
+                  			<span class="value">odlingsmee</span>
+                  			<span class="value">2006-01-01</span>
+                  			<span class="value">Initial Revision</span>
+                  		
+               </li>
+               		
+               <li class="last">
+                  			<span class="property">1.2:</span>
+                  			<span class="value">odlingsmee</span>
+                  			<span class="value">2006-01-21</span>
+                  			<span class="value">Completed main flow of events and exception flows and alternate flows</span>
+                  		
+               </li>
+               	
+            </ol>
+         </div>
+         <div class="heading2">Properties</div>
+         <div id="use-case-properties">
+            <ul>
+               
+               <li><span class="property">Trigger:</span><span class="value">A new requirement is discovered or thought of</span></li>
+               		
+               <li><span class="property">Goal:</span><span class="value">To record the details of a new requirement</span></li>
+               		
+               <li><span class="property">Primary Actor:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="actors.html#business-analyst">Business Analyst</a></span></li>
+               		
+               <li><span class="property">Pre-Requisites:</span><span class="value">None</span></li>
+               		
+               <li><span class="property">Success Outcome:</span><span class="value">A new requirement will have been documented</span></li>
+               		
+               <li><span class="property">Failure Outcome:</span><span class="value">The reason for the failure to add the requirement will have been provided to the actor</span></li>
+               		
+               <li><span class="property">Priority:</span><span class="value">1</span></li>
+               		
+               <li><span class="property">Complexity:</span><span class="value">1</span></li>
+               	
+               <li><span class="property">Trace to:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC2.html">Build HTML Site [UC2]</a></span></li>
+               <li class="last"><span class="property">Package:</span><span class="value">dataentry</span></li>
+            </ul>
+         </div>
+         <div class="heading2">Basic Flow</div>
+         <div id="main-flow" class="sequence">
+            <ol>
+               		
+               <li id="open-repository">The business-analyst opens the the <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ1">requirements repository [RQ1]</a>.
+               </li>
+               		
+               <li id="add-new-requirement">The business analyst adds a new requirement to the repository giving it a <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ4">unique id [RQ4]</a>.
+               </li>
+               		
+               <li id="categorise-requirement">The business-analyst <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ43">categorises [RQ43]</a> the requirement with information such as <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ44">type [RQ44]</a>; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ45">package [RQ45]</a>; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ46">status [RQ46]</a> and any other <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ47">arbitrary classification [RQ47]</a> as required.
+               </li>
+               		
+               <li id="add-relationships">The business-analyst adds relationships to the requirement: these may include <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ5">parent (trace-from) relationships [RQ5]</a> as well as some relationships to show similar but not directly related requirements.
+               </li>
+               		
+               <li id="publish-new-repository">The business-analyst <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC2.html">publishes the new requirements [UC2]</a> repository to interested parties.
+               </li>
+               		
+               <li>The use-case ends</li>
+               	
+            </ol>
+         </div>
+         <div class="heading2">Specific Requirements</div>
+         <div id="use-case-business-rules">
+            <ul>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ1">RQ1</a>] <span class="property">XML datastore</span>:</span><span class="value">Xuse shall use XML as the medium for storing all requirements related information (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ4">RQ4</a>] <span class="property">Requirements support</span>:</span><span class="value">Xuse shall support the concept of uniquely identifiable requirements (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ43">RQ43</a>] <span class="property">Requirements classification</span>:</span><span class="value">Xuse shall support the classification of requirements for ease of management and to allow for targeted views. (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ44">RQ44</a>] <span class="property">Requirement type</span>:</span><span class="value">Xuse shall classify requirements into types. The list of types supported is: functional; non-functional; technical; architectural;
+                     constraint and inverse requirement types. (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ45">RQ45</a>] <span class="property">Requirement package</span>:</span><span class="value">Xuse shall support classification of requirements into packages. (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ46">RQ46</a>] <span class="property">Requirement status</span>:</span><span class="value">Xuse shall support a status held against a requirement. Valid statuses are: proposed, agreed, on-hold, rejected, implemented. (proposed)</span></li>
+               <li><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ47">RQ47</a>] <span class="property">Arbitrary requirements classification</span>:</span><span class="value">Xuse shall support arbitrary classification extensions beyond those explicitly supported. (proposed)</span></li>
+               <li class="last"><span class="property">[<a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ5">RQ5</a>] <span class="property">Requirements relationships</span>:</span><span class="value">Xuse shall support parent/child relationships between requirements (proposed)</span></li>
+            </ul>
+         </div>
+         <h1>Requirements repo</h1>
+         <h3>non-functional</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="30%">title</th>
+                  <th width="46%">description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="RQ20-div">
+                  <tr id="RQ20">
+                     <td align="center"><a href="javascript:toggle('RQ20-detail', 'RQ20-toggle-button')"><img name="RQ20-toggle-button" src="../images/plus.png" alt="RQ20 details" border="0"></a></td>
+                     <td>RQ20</td>
+                     <td>1.0</td>
+                     <td>shall</td>
+                     <td><span class="property">Data Model Versioning</span></td>
+                     <td>Xuse shall provide versioning information on the data model to facilitate tool interoperation (translation) and upgrade paths.</td>
+                  </tr>
+                  <tr id="RQ20-detail" style="display:none;">
+                     <td class="req-detail"></td>
+                     <td colspan="4" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           
+                           <li class="req-detail"><span style="property">type:</span><span class="value">non-functional</span></li>
+                           
+                           <li class="req-detail"><span style="property">status:</span><span class="value">proposed</span></li>
+                           
+                           <li class="req-detail"><span style="property">package:</span><span class="value">xuse.model</span></li>
+                           
+                        </ul>
+                     </td>
+                     <td colspan="1" class="req-detail" valign="top">
+                        <ul class="req-detail"></ul>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ23-div">
+                  <tr id="RQ23">
+                     <td align="center"><a href="javascript:toggle('RQ23-detail', 'RQ23-toggle-button')"><img name="RQ23-toggle-button" src="../images/plus.png" alt="RQ23 details" border="0"></a></td>
+                     <td>RQ23</td>
+                     <td>1.0</td>
+                     <td>shall</td>
+                     <td><span class="property">Build time</span></td>
+                     <td>Xuse shall be able to compile the XML data model into the disparate views in a timely fashion (i.e. within a matter of one
+                        or two minutes or less) - no strict performance requirements are necessary.
+                     </td>
+                  </tr>
+                  <tr id="RQ23-detail" style="display:none;">
+                     <td class="req-detail"></td>
+                     <td colspan="4" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           
+                           <li class="req-detail"><span style="property">type:</span><span class="value">non-functional</span></li>
+                           
+                           <li class="req-detail"><span style="property">status:</span><span class="value">proposed</span></li>
+                           
+                           <li class="req-detail"><span style="property">package:</span><span class="value">xuse.tools</span></li>
+                           
+                        </ul>
+                     </td>
+                     <td colspan="1" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           <li class="req-detail"><span style="property">trace to:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC2.html">Build HTML Site [UC2]</a></span></li>
+                        </ul>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ51-div">
+                  <tr id="RQ51">
+                     <td align="center"><a href="javascript:toggle('RQ51-detail', 'RQ51-toggle-button')"><img name="RQ51-toggle-button" src="../images/plus.png" alt="RQ51 details" border="0"></a></td>
+                     <td>RQ51</td>
+                     <td>1.0</td>
+                     <td>shall</td>
+                     <td><span class="property">Internationalisation</span></td>
+                     <td>Xuse shall support internationalisation of textual outputs that are not derrived from user documents (i.e. headings, fixed
+                        text defined in <a class="glossary-link" href="glossary.html#XSLT" title="eXtensible Stylesheet Languague (XSL) Transforms: Used to manipulate (map) XML source documents into a varierty of output formats. Typical output formats include XML, XHTML, HTML and XSL:FO.">XSLT</a>s).
+                     </td>
+                  </tr>
+                  <tr id="RQ51-detail" style="display:none;">
+                     <td class="req-detail"></td>
+                     <td colspan="4" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           
+                           <li class="req-detail"><span style="property">type:</span><span class="value">non-functional</span></li>
+                           
+                           <li class="req-detail"><span style="property">status:</span><span class="value">proposed</span></li>
+                           
+                           <li class="req-detail"><span style="property">package:</span><span class="value">xuse</span></li>
+                           
+                        </ul>
+                     </td>
+                     <td colspan="1" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           <li class="req-detail"><span style="property">trace to:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ52">RQ52</a></span></li>
+                        </ul>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ52-div">
+                  <tr id="RQ52">
+                     <td align="center"><a href="javascript:toggle('RQ52-detail', 'RQ52-toggle-button')"><img name="RQ52-toggle-button" src="../images/plus.png" alt="RQ52 details" border="0"></a></td>
+                     <td>RQ52</td>
+                     <td>1.0</td>
+                     <td>should</td>
+                     <td><span class="property">Translations</span></td>
+                     <td>Xuse should provide translations for headings and other text defined in <a class="glossary-link" href="glossary.html#XSLT" title="eXtensible Stylesheet Languague (XSL) Transforms: Used to manipulate (map) XML source documents into a varierty of output formats. Typical output formats include XML, XHTML, HTML and XSL:FO.">XSLT</a>s in five or more common languages.
+                     </td>
+                  </tr>
+                  <tr id="RQ52-detail" style="display:none;">
+                     <td class="req-detail"></td>
+                     <td colspan="4" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           
+                           <li class="req-detail"><span style="property">type:</span><span class="value">non-functional</span></li>
+                           
+                           <li class="req-detail"><span style="property">status:</span><span class="value">proposed</span></li>
+                           
+                           <li class="req-detail"><span style="property">package:</span><span class="value">xuse</span></li>
+                           
+                        </ul>
+                     </td>
+                     <td colspan="1" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           <li class="req-detail"><span style="property">trace from:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="requirements.html#RQ51">RQ51</a></span></li>
+                        </ul>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ56-div">
+                  <tr id="RQ56">
+                     <td align="center"><a href="javascript:toggle('RQ56-detail', 'RQ56-toggle-button')"><img name="RQ56-toggle-button" src="../images/plus.png" alt="RQ56 details" border="0"></a></td>
+                     <td>RQ56</td>
+                     <td>1.0</td>
+                     <td>shall</td>
+                     <td><span class="property">Version Control</span></td>
+                     <td>Xuse shall allow easy integration with existing version control systems. Use of version control systems is not manadatory
+                        with Xuse but is possible
+                     </td>
+                  </tr>
+                  <tr id="RQ56-detail" style="display:none;">
+                     <td class="req-detail"></td>
+                     <td colspan="4" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           
+                           <li class="req-detail"><span style="property">type:</span><span class="value">non-functional</span></li>
+                           
+                           <li class="req-detail"><span style="property">status:</span><span class="value">implemented</span></li>
+                           
+                           <li class="req-detail"><span style="property">package:</span><span class="value">xuse</span></li>
+                           
+                        </ul>
+                     </td>
+                     <td colspan="1" class="req-detail" valign="top">
+                        <ul class="req-detail">
+                           <li class="req-detail"><span style="property">trace to:</span><span class="value"><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC4.html">Edit Use-Case [UC4]</a></span></li>
+                        </ul>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br>
+         <div class="heading1">Actors</div>
+         	
+         	
+         <div class="heading2">
+            &lt;&lt;person&gt;&gt;
+            Business Analyst
+         </div>
+         <div id="@id" class="actor">
+            <p>A Business-analyst using Xuse. Responsible for addding requirements, creating and editing use-cases.</p>
+            <p><span class="property">trace to:</span><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC1.html">Add Requirement [UC1]</a>; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC3.html">Add Use-Case [UC3]</a>; <a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC4.html">Edit Use-Case [UC4]</a></p>
+         </div>
+         	
+         	
+         <div class="heading2">
+            &lt;&lt;system&gt;&gt;
+            Xuse
+         </div>
+         <div id="@id" class="actor">
+            <p>The system (Xuse)</p>
+            <p><span class="property">trace to:</span><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC2.html">Build HTML Site [UC2]</a></p>
+         </div>
+         	
+         	
+         <div class="heading2">Builder</div>
+         <div id="@id" class="actor">
+            <p>This is an actor who can kick off a build. This may be a real person (in the case of manual builds) or a scheduled process.</p>
+            <p><span class="property">trace to:</span><a xmlns:xs="http://www.w3.org/2001/XMLSchema" href="UC2.html">Build HTML Site [UC2]</a></p>
+         </div>
+         	
+         <br>
+         
+         <div xmlns:xs="http://www.w3.org/2001/XMLSchema" id="footer">documentation generated by<a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 2006-11-14T23:34:52.296Z
+         </div>
+      </div>
+      
+      <table class="graph">
+            <caption>Testing</caption>
+            <tbody>
+               <tr>
+                  <td rowspan="2" style="background: #fff; vertical-align:top; text-align:right; line-height:250pt; width:1pt"></td>
+                  <td style="width:1px; border-left:1px solid black"></td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2006-11: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2006-11: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2006-12: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2006-12: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-01: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-01: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-02: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-02: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-03: 11 Created" style="height:55pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-03: 50 Modified" style="height:250pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-04: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-04: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-05: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-05: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-06: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-06: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-07: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-07: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-08: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-08: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-09: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-09: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-10: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-10: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-11: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-11: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2007-12: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2007-12: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2008-01: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2008-01: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2008-02: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2008-02: 0 Modified" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2008-03: 2 Created" style="height:10pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2008-03: 21 Modified" style="height:105pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-1" title="2008-04: 0 Created" style="height:0pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+                  <td style="vertical-align:bottom; height:250pt">
+                     <div class="bar-colour-2" title="2008-04: 6 Modified" style="height:30pt; font-size:0pt; width:100%; border: 1px solid;"></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td style="border-top:1px solid black"></td>
+                  <td colspan="8" style="text-align:right; border-top:1px solid black; border-right:1px solid black; height: 5px;">
+                     <div style="position: relative; top: 15px; left: 20px;">2007-02</div>
+                  </td>
+                  <td colspan="8" style="text-align:right; border-top:1px solid black; border-right:1px solid black; height: 5px;">
+                     <div style="position: relative; top: 15px; left: 20px;">2007-06</div>
+                  </td>
+                  <td colspan="8" style="text-align:right; border-top:1px solid black; border-right:1px solid black; height: 5px;">
+                     <div style="position: relative; top: 15px; left: 20px;">2007-10</div>
+                  </td>
+                  <td colspan="8" style="text-align:right; border-top:1px solid black; border-right:1px solid black; height: 5px;">
+                     <div style="position: relative; top: 15px; left: 20px;">2008-02</div>
+                  </td>
+                  <td colspan="2" style="text-align:right; border-top:1px solid black; border-right:1px solid black; height: 5px;">
+                     <div style="position: relative; top: 15px; left: 20px;"></div>
+                  </td>
+               </tr>
+               <tr>
+                  <td colspan="26" style="text-align:center;">Date</td>
+               </tr>
+            </tbody>
+         </table>
+      
+   </body>
+</html>

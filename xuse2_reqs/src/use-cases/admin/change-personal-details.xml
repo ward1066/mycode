@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC2" name="Manage Personal Details" model-version="0.3">	
+	<xuse:description>This use-case describes the process whereby a user views and updates their personal demographic details stored on the system.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.6 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-01-01</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+			<xuse:revision>1.2</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-05-23</xuse:change-date>
+			<xuse:description>Upgraded to version 0.2</xuse:description>
+		</xuse:version>
+		<xuse:version>
+			<xuse:revision>1.3</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2007-03-19</xuse:change-date>
+			<xuse:description>Upgraded to version 0.3</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.5</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2007-03-19</xuse:change-date>
+            <xuse:description>Add links to specific requirements</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.6</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>The user's personal information has changed or the user notices that the information held by the system is inaccurate or the user wishes to browse what information the system holds about them.</xuse:trigger>
+		<xuse:goal>To allow the user to view and (where necesary) update their information on the system</xuse:goal>
+		<xuse:primary-actor refId="user"/>
+		<xuse:pre-requisites>The user will be <xuse:uc-ref refId="UC1">Logged On</xuse:uc-ref>.</xuse:pre-requisites>
+		<xuse:success-outcome>The user's details will have been updated on the system.</xuse:success-outcome>
+		<xuse:failure-outcome>The user will have been informed of the validation or techinical issues that prevented the update from being successful</xuse:failure-outcome>
+		<xuse:priority>1</xuse:priority>
+		<xuse:complexity>1</xuse:complexity>
+	    <xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="navigate-to-personal-info">
+            <xuse:description>The user navigates to the personal information screen.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="present-personal-info">
+            <xuse:description>The system <xuse:req-ref refId="RQ21">presents the user's personal information to them</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="select-edit">
+            <xuse:description>The user notices that the information is incorrect and selects the "edit" option.</xuse:description>
+            <xuse:ref-alternate-flow refId="no-changes-to-make" condition="the user does not want to make changes"/>
+		</xuse:step>
+		<xuse:step step-id="present-editable-view">
+            <xuse:description>The presents the user with an <xuse:req-ref refId="RQ22">editable</xuse:req-ref> view of their <xuse:req-ref refId="RQ8">personal information</xuse:req-ref>. The editable fields include: <xuse:req-ref refId="RQ9">first name</xuse:req-ref>; <xuse:req-ref refId="RQ10">last name</xuse:req-ref>and <xuse:req-ref refId="RQ11">address</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="edit-details">
+			<xuse:description>The user edits their details as appropriate</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="submit-details">
+			<xuse:description>The user submits the updated details to the system.</xuse:description>
+			<xuse:ref-alternate-flow refId="validation-errors" condition="the system finds that the new data entered fails validation"/>
+		</xuse:step>
+		<xuse:step step-id="validate-details">
+			<xuse:description>The system validates that the details provide were <xuse:req-ref refId="RQ12">allowable</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="save-details">
+			<xuse:description>The system saves the new details and presents the updated information back to the user in a read-only view.</xuse:description>
+			<xuse:ref-exception-flow refId="save-failed" condition="there is an error updating the datastore"/>
+		</xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:alternate-flows>
+	    <xuse:alternate-flow title="No changes to make" id="no-changes-to-make">
+			<xuse:step step-id="no-changes">
+				<xuse:description>The user decides not to make any updates.</xuse:description>
+			</xuse:step>
+			<xuse:end/>
+		</xuse:alternate-flow>
+		<xuse:alternate-flow title="Validation Errors" id="validation-errors">
+			<xuse:step step-id="validation-error-results">
+				<xuse:description>The system presents the user with the details of the one or more validation errors that were encountered.</xuse:description>
+			</xuse:step>
+			<xuse:rejoin at-step="edit-details"/>
+		</xuse:alternate-flow>
+	</xuse:alternate-flows>
+	<xuse:exception-flows>
+		<xuse:exception-flow title="Record Update Error" id="save-failed">
+			<xuse:step step-id="update-failure">
+				<xuse:description>The system cannot update the user's record because of an technical issue</xuse:description>
+			</xuse:step>
+			<xuse:step step-id="inform-user">
+				<xuse:description>The system informs the user of the issue</xuse:description>
+			</xuse:step>
+			<xuse:end/>
+		</xuse:exception-flow>
+	</xuse:exception-flows>
+</xuse:use-case>

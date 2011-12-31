@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC9" name="Manage Orders" model-version="0.3">	
+	<xuse:description>Allows the user to view current (open) and previous orders and track order and delivery progress.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.1 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.2</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-31</xuse:change-date>
+            <xuse:description>Added main an alternative flows</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A user wishes to track or view an open order or they wish to view a historical order.</xuse:trigger>
+		<xuse:goal>To review the order details and (if it is an open order) track the order progress.</xuse:goal>
+		<xuse:primary-actor refId="buyer"/>
+		<xuse:primary-actor refId="merchant"/>
+		<xuse:primary-actor refId="service-support"/>
+		<xuse:secondary-actor refId="merchant-system"/>
+		<xuse:pre-requisites>The user shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref>.</xuse:pre-requisites>
+		<xuse:success-outcome>The user will have been informed about the current status of appropriate orders current and historic.</xuse:success-outcome>
+		<xuse:failure-outcome>The user will have been informed about any technical exceptions in a way that is meaningful to them. They will have been reassured that the technical issue will not affect the delivery of their order.</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-2</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="select-track-orders">
+          <xuse:description>The user selects the option to review current and historic orders.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="search-all-orders">
+		  <xuse:description>The system searches for all orders <xuse:req-ref refId="RQ31">than can be viewed</xuse:req-ref> by the user..</xuse:description>
+		  <xuse:ref-exception-flow refId="system-exception" condition="system exception"/>
+		</xuse:step>
+		<xuse:step step-id="query-open-order-status">
+          <xuse:description>For each open order the system will query the <xuse:req-ref refId="RQ30">appropriate merchant-system(s)</xuse:req-ref> to get the latest order progress status.</xuse:description>
+          <xuse:ref-exception-flow refId="system-exception" condition="system exception"/>
+        </xuse:step>
+		<xuse:step step-id="display-orders">
+		  <xuse:description>The system <xuse:req-ref refId="RQ36">displays the list</xuse:req-ref> of all orders with <xuse:req-ref refId="RQ35">open orders first, otherwise in reverse chronological order</xuse:req-ref>.</xuse:description>
+		  <xuse:ref-alternate-flow refId="no-existing-orders" condition="No orders found"/>
+		</xuse:step>
+		<xuse:step step-id="review-orders">
+          <xuse:description>The user reviews the list of orders.</xuse:description>
+          <xuse:ref-alternate-flow refId="review-order-detail" condition="More detail required"/>
+        </xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:alternate-flows>
+	   <xuse:alternate-flow title="No current or historic orders" id="no-existing-orders">
+           <xuse:step step-id="no-orders-found">
+               <xuse:description>The system determines that there are no existing orders (current or historic) for the buyer.</xuse:description>
+           </xuse:step>
+           <xuse:step step-id="display-information-message">
+               <xuse:description>The system displays an appropriate information message informing the user that there is no order history for them. The system will additionally provide some contact details should they believe that this is an error.</xuse:description>
+           </xuse:step>
+           <xuse:end/>
+       </xuse:alternate-flow>
+	   <xuse:alternate-flow title="Review Order Detail" id="review-order-detail">
+	       <xuse:step step-id="drill-down">
+	           <xuse:description>The user clicks on one of the orders in the list.</xuse:description>
+	       </xuse:step>
+	       <xuse:step step-id="display-order-detail">
+	           <xuse:description>The system displays further detailed information about the order such as price, invoice address and shipment address.</xuse:description>
+	       </xuse:step>
+	       <xuse:rejoin at-step="review-orders"/>
+	   </xuse:alternate-flow>
+	</xuse:alternate-flows>
+	<xuse:exception-flows>
+	   <xuse:exception-flow title="System exception" id="system-exception">
+	       <xuse:step step-id="exception-occurs">
+	           <xuse:description>The system reports an exception.</xuse:description>
+	       </xuse:step>
+	       <xuse:step step-id="display-error-message">
+	           <xuse:description>A helpful error message is presented to the user, reassuring them that this system error has not affected their order(s). The buyer will be advised to check back later.</xuse:description>
+	       </xuse:step>
+	       <xuse:end/>
+	   </xuse:exception-flow>
+	</xuse:exception-flows>
+	<xuse:business-rules>
+        <xuse:req-ref refId="RQ27"/>
+    </xuse:business-rules>
+</xuse:use-case>

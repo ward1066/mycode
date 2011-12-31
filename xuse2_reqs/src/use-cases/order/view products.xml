@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC6" name="View Products" model-version="0.3">	
+	<xuse:description>Allows the user to enter some search criteria and browse the resulting list of matching products. Drill-down allows more details to be displayed for items of interest.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.1 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.5</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.6</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-31</xuse:change-date>
+            <xuse:description>Assigned non-functional requirements traceability.</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A buyer wishes to research or purchase a product.</xuse:trigger>
+		<xuse:goal>To find a product that matches the buyer's search criteria and view some product details.</xuse:goal>
+		<xuse:primary-actor refId="buyer"/>
+		<xuse:pre-requisites>The buyer shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref> and registered as a buyer.</xuse:pre-requisites>
+		<xuse:success-outcome>The buyer will have been able to view (and print) the volume / value of sales for the period they were interested in.</xuse:success-outcome>
+		<xuse:failure-outcome>The buyer will not have been able to access the sales reports - the system will have generated error messages and advice as to the appropriate recourse should they wish to obtain the details immediately.</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="enter-search-criteria">
+            <xuse:description>The buyer enters the search criteria. They can enter search terms in free text. Optionally they may also restrict the extent of the search by selecting the product category within which to search.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="browse-results">
+            <xuse:description>The buyer can browse the list of products returned.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="view-item-detail">
+            <xuse:description>The buyer can drill-down on a product of interest. Within the drill-down more details / images of the product are available.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="add-to-cart">
+            <xuse:description>The buyer <xuse:uc-ref stereotype="include" refId="UC4">adds the item to the shopping cart</xuse:uc-ref>.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="view-cart">
+            <xuse:description>The buyer <xuse:uc-ref stereotype="include" refId="UC7">reviews the contents of their shopping cart</xuse:uc-ref>.</xuse:description>
+        </xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:business-rules>
+        <xuse:req-ref refId="RQ27"/>
+    </xuse:business-rules>
+</xuse:use-case>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xuse:dictionary xmlns:xuse="http://xuse.sourceforge.net" model-version="0.3">
+
+    <!-- The following show how the default values can be overridden -->
+    <xuse:entry key="doc.requirements.intent.shall">
+        <xuse:value xml:lang="en-GB">MUST</xuse:value>
+    </xuse:entry>
+    <xuse:entry key="doc.requirements.intent.should">
+        <xuse:value xml:lang="en-GB">SHOULD</xuse:value>
+    </xuse:entry>
+    <xuse:entry key="doc.requirements.intent.may">
+        <xuse:value xml:lang="en-GB">MAY</xuse:value>
+    </xuse:entry>
+    
+    <!-- As this is a custom taxonomy we need to provide some text for the field heading -->
+    <xuse:entry key="doc.req.taxonomy.target-release">
+        <xuse:value xml:lang="en-GB">target release</xuse:value>
+    </xuse:entry>
+</xuse:dictionary>

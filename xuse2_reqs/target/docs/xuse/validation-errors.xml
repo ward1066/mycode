@@ -1,0 +1,73 @@
+<validation-errors>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 775; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; s4s-elt-invalid-content.1: The content
+         of '#AnonType_script' is invalid. Element 'attribute' is invalid, misplaced, or occurs too often.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>WARN; line 33; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; schema_reference.4: Failed to read schema
+         document 'http://www.w3.org/2001/xml.xsd', because 1) could not find the document; 2) the document could not be read; 3) the
+         root element of the document is not &lt;xsd:schema&gt;.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 303; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; s4s-elt-must-match.1: The content of 'i18n'
+         must match (annotation?, ((attribute | attributeGroup)*, anyAttribute?)). A problem was found starting at: attribute.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 1046; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; s4s-elt-invalid-content.1: The content
+         of '#AnonType_pre' is invalid. Element 'attribute' is invalid, misplaced, or occurs too often.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 753; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; s4s-elt-invalid-content.1: The content
+         of '#AnonType_style' is invalid. Element 'attribute' is invalid, misplaced, or occurs too often.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 1167; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; s4s-elt-invalid-content.1: The content
+         of '#AnonType_bdo' is invalid. Element 'attribute' is invalid, misplaced, or occurs too often.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>ERROR; line 303; /home/adminuser/git/mycode/xuse2_reqs/./src/documents/vision.xml; src-resolve: Cannot resolve the name 'xml:lang'
+         to a(n) 'attribute declaration' component.
+      </level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+   <error>
+      <class>schema-validation</class>
+      <level>=</level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+</validation-errors>

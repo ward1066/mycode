@@ -1,0 +1,69 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC6::View Products</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC6::View Products</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">Allows the user to enter some search criteria and browse the resulting list of matching products. Drill-down allows more details
+               to be displayed for items of interest.
+            </div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.1</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">20 Sep 2009 ;</span> <span class="value">Initial Revision</span></li>
+                  <li><span class="property">1.5</span><span class="value">odlingsmee;</span> <span class="value">17 Jan 2010 ;</span> <span class="value">Assigned to release-1</span></li>
+                  <li class="last"><span class="property">1.6</span><span class="value">odlingsmee;</span> <span class="value">31 Jan 2010 ;</span> <span class="value">Assigned non-functional requirements traceability.</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">A buyer wishes to research or purchase a product.</span></li>
+                  <li><span class="property">Goal</span><span class="value">To find a product that matches the buyer's search criteria and view some product details.</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#buyer">Buyer</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The buyer shall be <a href="UC1.html">[UC1] logged on</a> and registered as a buyer.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The buyer will have been able to view (and print) the volume / value of sales for the period they were interested in.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The buyer will not have been able to access the sales reports - the system will have generated error messages and advice as
+                        to the appropriate recourse should they wish to obtain the details immediately.</span></li>
+                  <li><span class="property">Priority</span><span class="value">2</span></li>
+                  <li><span class="property">Complexity</span><span class="value">3</span></li>
+                  <li><span class="property">target release</span><span class="value"> release-1</span></li>
+                  <li><span class="property">Trace from</span><span class="value"><a href="UC4.html">[UC4] Add to shopping cart</a></span></li>
+                  <li><span class="property">Trace to</span><span class="value"><a href="UC4.html">[UC4] Add to shopping cart</a>; <a href="UC7.html">[UC7] Manage Shopping Cart</a></span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">order</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="enter-search-criteria">The buyer enters the search criteria. They can enter search terms in free text. Optionally they may also restrict the extent
+                     of the search by selecting the product category within which to search.
+                  </li>
+                  <li id="browse-results">The buyer can browse the list of products returned.</li>
+                  <li id="view-item-detail">The buyer can drill-down on a product of interest. Within the drill-down more details / images of the product are available.</li>
+                  <li id="add-to-cart">The buyer <a href="UC4.html">[UC4] adds the item to the shopping cart</a>.
+                  </li>
+                  <li id="view-cart">The buyer <a href="UC7.html">[UC7] reviews the contents of their shopping cart</a>.
+                  </li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Specific Requirements</div>
+            <div id="use-case-business-rules">
+               <ul>
+                  <li class="last"><span class="property">[<a href="requirements.html#RQ27">RQ27</a>] Permission based controls:</span><span class="value">The system shall only allow access to functions that are associated with the permissions of the current user. (proposed)</span></li>
+               </ul>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:30:54 +10:30
+         </div>
+      </div>
+   </body>
+</html>

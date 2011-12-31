@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC5" name="Checkout" model-version="0.3">	
+	<xuse:description>Describes the checkout process whereby the buyer confirms the items they wish to purchase, enters delivery, billing addresses as well as payment information. Optionally items can be giftwrapped for a small additional fee.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.1 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.2</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2009-09-20</xuse:change-date>
+            <xuse:description>Added description</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.3</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2009-09-30</xuse:change-date>
+            <xuse:description>Added basic and alternate flows.</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.5</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A buyer has completed shopping on the site and wishes to pay for the goods they have selected.</xuse:trigger>
+		<xuse:goal>To review the selected items, enter delivery and payment details to complete the order.</xuse:goal>
+		<xuse:primary-actor refId="buyer"/>
+		<xuse:secondary-actor refId="merchant-system"/>
+		<xuse:pre-requisites>The buyer shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref>, will have <xuse:uc-ref refId="UC4">added at least one item to the shopping cart</xuse:uc-ref>.</xuse:pre-requisites>
+		<xuse:success-outcome>The buyer will have completed the transaction and will have been provided with a unique reference for the transaction for tracking / querying purposes.</xuse:success-outcome>
+		<xuse:failure-outcome>The buyer will not have completed the transaction, no money will have been deducted from the buyer's account.</xuse:failure-outcome>
+		<xuse:priority>1</xuse:priority>
+		<xuse:complexity>1</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="review-shopping-basket">
+            <xuse:description>The buyer <xuse:uc-ref stereotype="include" refId="UC7">reviews the contents of their shopping basket</xuse:uc-ref> and selects the option to checkout.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="add-gift-wrap">
+            <xuse:description>The system prompts the buyer to add additional gift-wrap options and add a personal note.</xuse:description>
+        </xuse:step>
+		<xuse:step step-id="select-delivery-preference">
+            <xuse:description>The system prompts the buyer to choose delivery method / time.</xuse:description>
+        </xuse:step>
+		<xuse:step step-id="enter-delivery-address">
+		    <xuse:description>The system prompts the buyer to enter an address where the items in the cart will be delivered.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="enter-invoice-address">
+            <xuse:description>The system prompts the buyer to enter an invoice address.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="enter-payment-information">
+            <xuse:description>The system prompts the buyer to enter their payment card details.</xuse:description>
+            <xuse:ref-alternate-flow refId="existing-card-details" condition="The user selects existing card details"/>
+        </xuse:step>
+        <xuse:step step-id="confirm-order-detail">
+            <xuse:description>The buyer is asked to review and confirm the order.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="place-order">
+            <xuse:description>The buyer confirms the order.</xuse:description>
+        </xuse:step>
+        <xuse:step step-id="charge-card">
+            <xuse:description>The system charges the payment card to the value of the order.</xuse:description>
+            <xuse:ref-alternate-flow refId="card-details-rejected" condition="Card details invalid"/>
+        </xuse:step>
+        <xuse:step step-id="place-order-with-merchant">
+            <xuse:description>The system passes details of the order to the merchant or merchants that will fulfil the order.</xuse:description>
+        </xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:alternate-flows>
+	   <xuse:alternate-flow title="Existing payment information" id="existing-card-details">
+	       <xuse:step step-id="existing-payment-information">
+	           <xuse:description>The buyer selects pre-existing payment details stored on the system.</xuse:description>
+	       </xuse:step>
+	       <xuse:rejoin at-step="confirm-order-detail"/>
+	   </xuse:alternate-flow>
+	   <xuse:alternate-flow title="Invalid card details" id="card-details-rejected">
+	       <xuse:step step-id="reject-card">
+	           <xuse:description>The system determines that the card details are invalid.</xuse:description>
+	       </xuse:step>
+	       <xuse:step step-id="prompt-alternate-payment-information">
+               <xuse:description>The system informs the buyer of the issue and prompts the buyer to enter alternative payment details.</xuse:description>
+           </xuse:step>
+           <xuse:rejoin at-step="enter-payment-information"/>
+	   </xuse:alternate-flow>
+	</xuse:alternate-flows>
+</xuse:use-case>

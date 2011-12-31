@@ -1,0 +1,12 @@
+(datatype num 
+  if (number? N) 
+  ____________ 
+  N : (num N); 
+  M : (num M); N : (num N); 
+  _________________________ 
+  (+ M N) : (num (M + N));) 
+  
+
+(define myadd 
+  {(num M) --> (num N) --> (num (M + N))} 
+   M N -> (+ M N)) 

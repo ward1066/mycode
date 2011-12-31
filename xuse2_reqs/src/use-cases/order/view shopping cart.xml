@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC7" name="Manage Shopping Cart" model-version="0.3">	
+	<xuse:description>Allows the user to examine the shopping cart to see what products it contains. It also allows the quantity to be changed or items to be removed from the cart.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.1 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.4</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.6</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-02-01</xuse:change-date>
+            <xuse:description>Added content for main flow</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A user wishes to mange the items in their shopping cart.</xuse:trigger>
+		<xuse:goal>To review and manage the user's shopping cart.</xuse:goal>
+		<xuse:primary-actor refId="buyer"/>
+		<xuse:pre-requisites>The user shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref>.</xuse:pre-requisites>
+		<xuse:success-outcome>The buyer....</xuse:success-outcome>
+		<xuse:failure-outcome>The buyer....</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="choose-report-type">
+            <xuse:description>todo</xuse:description>
+		</xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:business-rules>
+        <xuse:req-ref refId="RQ27"/>
+    </xuse:business-rules>
+</xuse:use-case>

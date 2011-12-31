@@ -1,0 +1,98 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC3::View Sales</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC3::View Sales</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">Allows merchants to view a report on sales activity for products that have been purchased via the system. The merchant can
+               choose different report types, view the report online, print it or save it locally in a different formats.
+            </div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.2</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">01 Jan 2006 ;</span> <span class="value">Initial Revision</span></li>
+                  <li class="last"><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">10 Nov 2009 ;</span> <span class="value">Completed sequence of events and added description.</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">A merchant wishes to review recent sales on the system.</span></li>
+                  <li><span class="property">Goal</span><span class="value">To review the volume / value of sales of the merchants products.</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#merchant">Merchant</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The merchant shall be <a href="UC1.html">[UC1] logged on</a> and registered as a merchant.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The merchant will have been able to view (and print) the volume / value of sales for the period they were interested in.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The merchant will not have been able to access the sales reports - the system will have generated error messages and advice
+                        as to the appropriate recourse should they wish to obtain the details immediately.</span></li>
+                  <li><span class="property">Priority</span><span class="value">2</span></li>
+                  <li><span class="property">Complexity</span><span class="value">3</span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">merchant</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="choose-report-type">The merchant selects the type of sales report they wish to see.</li>
+                  <li id="enter-report-parameters">The merchant enters parameters. Paremeters include product class, promotional codes and date range.</li>
+                  <li id="validate-report-params">The system validates that the report parameters have been entered correctly.</li>
+                  <li id="execute-report">The system executes the report with the parameters supplied by the merchant.</li>
+                  <li id="display-report-results">The system presents the report results to the merchant.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Alternative Flows</div>
+            <div class="heading3">Export Report</div>
+            <div class="sequence" id="export-report">
+               <p>At step <a href="#display-report-results">5 of the Main flow</a> when the merchant wishes to save a copy of the report
+               </p>
+               <ol>
+                  <li id="select-report-export-format">The merchant selects the output format of the report.</li>
+                  <li id="select-destination">The merchant selects where the report should be exported to.</li>
+                  <li>The flow of events continues from step <a href="#display-report-results">5 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading3">Select a new report</div>
+            <div class="sequence" id="select-new-report">
+               <p>At step <a href="#display-report-results">5 of the Main flow</a> when the merchant wishes to run a different report
+               </p>
+               <ol>
+                  <li id="select-alternate-report">The merchant selects a different report to the one currently displayed.</li>
+                  <li>The flow of events continues from step <a href="#enter-report-parameters">2 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading2">Exception Flows</div>
+            <div class="heading3">Invalid report parameters</div>
+            <div class="sequence" id="invalid-report-parameters">
+               <p>At step <a href="#validate-report-params">3 of the Main flow</a> when invalid report parameters entered
+               </p>
+               <ol>
+                  <li id="display-validation-errors">The systems highlights validation errors to the merchant and prompts the merchant to correct the errors.</li>
+                  <li>The flow of events continues from step <a href="#enter-report-parameters">2 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading3">Report error</div>
+            <div class="sequence" id="report-execution-error">
+               <p>At step <a href="#execute-report">4 of the Main flow</a> when the system fails to succesfully execute the report
+               </p>
+               <ol>
+                  <li id="report-execution-failed">The system cannot run the report due to a technical fault.</li>
+                  <li id="display-error">The systems informs the merchant of the issue and (where possible) advises them of the best possible course of action.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:24:33 +10:30
+         </div>
+      </div>
+   </body>
+</html>

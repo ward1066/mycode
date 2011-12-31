@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stock-content [
+ <!ELEMENT stock-content (stock-paragraph*,stock-section*) >
+ <!ATTLIST stock-content xmlns:xuse CDATA #IMPLIED
+                         xmlns:xhtml CDATA #IMPLIED
+                         xmlns:xi CDATA #IMPLIED>
+ <!ATTLIST stock-content model-version CDATA #REQUIRED>
+ <!ELEMENT stock-paragraph (description,content) >
+ <!ELEMENT stock-section (description,content) >
+ <!ELEMENT description (#PCDATA) >
+ <!ELEMENT xuse:p ANY >
+ <!ELEMENT xuse:section ANY >
+ <!ELEMENT content ANY >
+ <!ATTLIST xuse:p id ID #IMPLIED>
+ <!ATTLIST xuse:section id ID #IMPLIED
+                        title CDATA #IMPLIED>
+]>
+<stock-content model-version="0.3"
+        xmlns:xuse="http://xuse.sourceforge.net"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <!-- Some example stock paragraphs -->
+    <stock-paragraph>
+        <description>
+            Typical introductory paragraph for a Vision document
+            explaining what the Vision document's purpose is.
+        </description>
+        <content>
+		    <xuse:p id="vision-intro-description">
+				This document describes the vision for
+				<xuse:project />.
+				It provides a high-level summary of the expected features of <xuse:project />
+				and defines the release roadmap within the context of the identified
+				use-cases.
+			</xuse:p>
+		</content>
+	</stock-paragraph>
+	
+	<stock-paragraph>
+	    <description>
+            Paragraph explaining what the Vision document will
+            aim to achieve.
+        </description>
+        <content>
+	        <xuse:p id="vision-intro-context">
+		        This document will endeavour to set the context for
+		        <xuse:project />; who the stakeholders are; the key business drivers;
+		        and the success criteria.
+	        </xuse:p>
+        </content>
+    </stock-paragraph>
+    
+    <stock-paragraph>
+        <description>
+            Paragraph explaining how the vision document is expected to
+            be maintained.
+        </description>
+        <content>
+	        <xuse:p id="vision-intro-doclife-para">
+		        This document is expected to be a "living document": it will evolve
+		        with <xuse:project /> as the project progresses. In this way the document
+		        should provide a good first reference for people new to <xuse:project />
+		        irrespective of the current progress on the project.
+		    </xuse:p>
+	    </content>
+    </stock-paragraph>
+    
+    <stock-paragraph>
+        <description>
+            Generic paragraph explaining that the audience is all project stakeholders
+            and all personnel involved in the development lifecycle.
+        </description>
+        <content>
+	        <xuse:p id="vision-intro-audience-para">
+		        This document is indended for all stakeholders in <xuse:project />
+		        including <xuse:customer />, <xuse:company /> business analysts, architects,
+		        developers, testers and service personnel.
+		    </xuse:p>
+	    </content>
+    </stock-paragraph>
+    
+    <stock-paragraph>
+        <description>
+            Introductory paragraph for the list of high-level requirements typically
+            found in the vision or project initiation document.
+        </description>
+        <content>
+            <xuse:p id="vision-high-level-reqs">
+                The following list defines some high level requirements for <xuse:project/>.
+            </xuse:p>
+        </content>
+    </stock-paragraph>        
+    
+</stock-content>

@@ -1,0 +1,89 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC4::Add to shopping cart</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC4::Add to shopping cart</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">The buyer adds a selected item to the shopping cart. The item will be retained within the list of items in the cart such that
+               it is available when the buyer has finished shopping and wishes to pay for their goods.
+            </div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.1</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">20 Sep 2009 ;</span> <span class="value">Initial Revision</span></li>
+                  <li><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">30 Sep 2009 ;</span> <span class="value">Added main flow</span></li>
+                  <li><span class="property">1.3</span><span class="value">odlingsmee;</span> <span class="value">30 Sep 2009 ;</span> <span class="value">Added detailed requirements associated with flow.</span></li>
+                  <li class="last"><span class="property">1.4</span><span class="value">odlingsmee;</span> <span class="value">17 Jan 2010 ;</span> <span class="value">Assigned to release-1</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">A buyer see a product or service that they wish to purchase.</span></li>
+                  <li><span class="property">Goal</span><span class="value">To add the selected product to the shopping cart.</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#buyer">Buyer</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The buyer shall be <a href="UC1.html">[UC1] logged on</a> and be in the process of <a href="UC6.html">[UC6] viewing a product</a>.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The buyer will have add the selected item to the shopping cart and be able to continue with their shopping.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The merchant will not have been able to add the item to the shopping cart - the system will have generated error messages
+                        and advice as to the appropriate recourse should they still wish to purchase the item.</span></li>
+                  <li><span class="property">Priority</span><span class="value">2</span></li>
+                  <li><span class="property">Complexity</span><span class="value">3</span></li>
+                  <li><span class="property">target release</span><span class="value"> release-1</span></li>
+                  <li><span class="property">Trace from</span><span class="value"><a href="UC6.html">[UC6] View Products</a></span></li>
+                  <li><span class="property">Trace to</span><span class="value"><a href="UC6.html">[UC6] View Products</a>; <a href="UC5.html">[UC5] Checkout</a></span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">order</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="select-product">The buyer <a href="requirements.html#RQ25">[RQ25] the product</a> they wish to add to the <a href="requirements.html#RQ26">[RQ26] shopping cart</a>.
+                  </li>
+                  <li id="add-item">The buyer selects the "add to cart" option</li>
+                  <li id="update-cart">The shopping cart is <a href="requirements.html#RQ19">[RQ19] updated</a> with new product.
+                  </li>
+                  <li id="update-cart-totals">The <a href="requirements.html#RQ18">[RQ18] value</a> of all the items is re-calculated and displayed to the buyer in their <a href="requirements.html#RQ14">[RQ14] own currency</a>.
+                  </li>
+                  <li id="continue-shopping">The buyer can <a href="UC6.html">[UC6] continue to browse the products</a> or <a href="UC5.html">[UC5] pay for the items that are in the shopping cart</a>.
+                  </li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Alternative Flows</div>
+            <div class="heading3">Product already in shopping cart</div>
+            <div class="sequence" id="item-already-in-cart">
+               <p>At step <a href="#update-cart">3 of the Main flow</a> when Shopping cart already contains product
+               </p>
+               <ol>
+                  <li id="update-cart-quantity">As the item is already present in the shopping cart, the <a href="requirements.html#RQ20">[RQ20] quantity of the product is incremented by one</a>.
+                  </li>
+                  <li>The flow of events continues from step <a href="#update-cart-totals">4 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading2">Specific Requirements</div>
+            <div id="use-case-business-rules">
+               <ul>
+                  <li><span class="property">[<a href="requirements.html#RQ25">RQ25</a>] Select products for purchase:</span><span class="value">The system shall allow the buyer to select products for purchase (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ26">RQ26</a>] Shopping Cart:</span><span class="value">The system shall support the concept of a user's shopping cart such that zero or more items can be stored for purchase. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ19">RQ19</a>] Shopping cart default quantities:</span><span class="value">When products are added to the cart the system shall assume a quantity of 1 (one) is required. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ18">RQ18</a>] Shopping cart running total:</span><span class="value">The application shall calculate a running total of all the products in the shopping cart. This will not include shipping or
+                        gift wrap costs. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ14">RQ14</a>] Multi-currency support:</span><span class="value">The application shall support multiple-currencies. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ20">RQ20</a>] Product already in cart:</span><span class="value">When a product that aleady exists is added to the shopping cart, the system shall increment the quantity by 1 (one). (proposed)</span></li>
+                  <li class="last"><span class="property">[<a href="requirements.html#RQ27">RQ27</a>] Permission based controls:</span><span class="value">The system shall only allow access to functions that are associated with the permissions of the current user. (proposed)</span></li>
+               </ul>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:30:54 +10:30
+         </div>
+      </div>
+   </body>
+</html>

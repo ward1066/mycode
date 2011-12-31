@@ -1,0 +1,110 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse::UC9::Manage Orders</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="use-case">
+         <div id="use-case-text">
+            <div class="heading1">UC9::Manage Orders</div>
+            <div class="heading2">Overview</div>
+            <div id="use-case-description">Allows the user to view current (open) and previous orders and track order and delivery progress.</div>
+            <div class="heading2">Document History</div>
+            <div id="document-history">
+               <ol>
+                  <li><span class="property">Current Version</span><span class="value">1.1</span></li>
+                  <li><span class="property">1.1</span><span class="value">odlingsmee;</span> <span class="value">20 Sep 2009 ;</span> <span class="value">Initial Revision</span></li>
+                  <li class="last"><span class="property">1.2</span><span class="value">odlingsmee;</span> <span class="value">31 Jan 2010 ;</span> <span class="value">Added main an alternative flows</span></li>
+               </ol>
+            </div>
+            <div class="heading2">Properties</div>
+            <div id="use-case-properties">
+               <ul>
+                  <li><span class="property">Trigger</span><span class="value">A user wishes to track or view an open order or they wish to view a historical order.</span></li>
+                  <li><span class="property">Goal</span><span class="value">To review the order details and (if it is an open order) track the order progress.</span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#buyer">Buyer</a></span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#merchant">Merchant</a></span></li>
+                  <li><span class="property">Primary Actor</span><span class="value"><a href="actors.html#service-support">Service Support</a></span></li>
+                  <li><span class="property">Secondary Actor</span><span class="value"><a href="actors.html#merchant-system">Merchant Ordering System</a></span></li>
+                  <li><span class="property">Pre-Requisites</span><span class="value">The user shall be <a href="UC1.html">[UC1] logged on</a>.</span></li>
+                  <li><span class="property">Success Outcome</span><span class="value">The user will have been informed about the current status of appropriate orders current and historic.</span></li>
+                  <li><span class="property">Failure Outcome</span><span class="value">The user will have been informed about any technical exceptions in a way that is meaningful to them. They will have been reassured
+                        that the technical issue will not affect the delivery of their order.</span></li>
+                  <li><span class="property">Priority</span><span class="value">2</span></li>
+                  <li><span class="property">Complexity</span><span class="value">3</span></li>
+                  <li><span class="property">target release</span><span class="value"> release-2</span></li>
+                  <li class="last"><span class="property">Package</span><span class="value">order</span></li>
+               </ul>
+            </div>
+            <div class="heading2">Basic Flow</div>
+            <div id="main-flow" class="sequence">
+               <ol>
+                  <li id="select-track-orders">The user selects the option to review current and historic orders.</li>
+                  <li id="search-all-orders">The system searches for all orders <a href="requirements.html#RQ31">[RQ31] than can be viewed</a> by the user..
+                  </li>
+                  <li id="query-open-order-status">For each open order the system will query the <a href="requirements.html#RQ30">[RQ30] appropriate merchant-system(s)</a> to get the latest order progress status.
+                  </li>
+                  <li id="display-orders">The system <a href="requirements.html#RQ36">[RQ36] displays the list</a> of all orders with <a href="requirements.html#RQ35">[RQ35] open orders first, otherwise in reverse chronological order</a>.
+                  </li>
+                  <li id="review-orders">The user reviews the list of orders.</li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Alternative Flows</div>
+            <div class="heading3">No current or historic orders</div>
+            <div class="sequence" id="no-existing-orders">
+               <p>At step <a href="#display-orders">4 of the Main flow</a> when No orders found
+               </p>
+               <ol>
+                  <li id="no-orders-found">The system determines that there are no existing orders (current or historic) for the buyer.</li>
+                  <li id="display-information-message">The system displays an appropriate information message informing the user that there is no order history for them. The system
+                     will additionally provide some contact details should they believe that this is an error.
+                  </li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading3">Review Order Detail</div>
+            <div class="sequence" id="review-order-detail">
+               <p>At step <a href="#review-orders">5 of the Main flow</a> when More detail required
+               </p>
+               <ol>
+                  <li id="drill-down">The user clicks on one of the orders in the list.</li>
+                  <li id="display-order-detail">The system displays further detailed information about the order such as price, invoice address and shipment address.</li>
+                  <li>The flow of events continues from step <a href="#review-orders">5 of the Main flow</a>.
+                  </li>
+               </ol>
+            </div>
+            <div class="heading2">Exception Flows</div>
+            <div class="heading3">System exception</div>
+            <div class="sequence" id="system-exception">
+               <p>At step <a href="#search-all-orders">2 of the Main flow</a> when system exception,  or At step <a href="#query-open-order-status">3 of the Main flow</a> when system exception
+               </p>
+               <ol>
+                  <li id="exception-occurs">The system reports an exception.</li>
+                  <li id="display-error-message">A helpful error message is presented to the user, reassuring them that this system error has not affected their order(s).
+                     The buyer will be advised to check back later.
+                  </li>
+                  <li>The use-case ends</li>
+               </ol>
+            </div>
+            <div class="heading2">Specific Requirements</div>
+            <div id="use-case-business-rules">
+               <ul>
+                  <li><span class="property">[<a href="requirements.html#RQ31">RQ31</a>] Restrict list of orders:</span><span class="value">The system shall restrict the list of orders visible to the user such that they cannot review orders that are not associated
+                        with them. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ30">RQ30</a>] Associate order line item with a vendor:</span><span class="value">The system shall associate order line items with a vendor via a unique vendor id. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ36">RQ36</a>] Order summary data:</span><span class="value">The following should be displayed on the order summary list. Order date/time, order (overall) status, order price,  estimated
+                        compltetion date (if known), buyer and vendor details. (proposed)</span></li>
+                  <li><span class="property">[<a href="requirements.html#RQ35">RQ35</a>] Order list presentation order:</span><span class="value">When a user searches for orders the list should be presented with open orders first with secondary sorting being via order
+                        date in reverse chronological order (newest orders first). (proposed)</span></li>
+                  <li class="last"><span class="property">[<a href="requirements.html#RQ27">RQ27</a>] Permission based controls:</span><span class="value">The system shall only allow access to functions that are associated with the permissions of the current user. (proposed)</span></li>
+               </ul>
+            </div>
+         </div>
+         <div id="activity-diagram"></div>
+         <div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:24:33 +10:30
+         </div>
+      </div>
+   </body>
+</html>

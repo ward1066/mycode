@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC1" name="Logon" model-version="0.3">	
+	<xuse:description>This use-case describes the sequence of events necessary to logon to the system</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.7 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-01-01</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+        <xuse:version>
+			<xuse:revision>1.2</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-05-23</xuse:change-date>
+			<xuse:description>Upgraded to version 0.2</xuse:description>
+		</xuse:version>		
+		<xuse:version>
+			<xuse:revision>1.2</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-08-07</xuse:change-date>
+			<xuse:description>Added new alternate flow for scenario where max attempts has been exceeded.</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.4</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2007-03-19</xuse:change-date>
+            <xuse:description>Upgraded to version 0.3</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.6</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2009-09-29</xuse:change-date>
+            <xuse:description>Fixed condition for exhausted attempts alternate flow.</xuse:description>
+        </xuse:version>
+        <xuse:version>
+            <xuse:revision>1.7</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2010-01-17</xuse:change-date>
+            <xuse:description>Assigned to release-1</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>The actor wishes to access the web application</xuse:trigger>
+		<xuse:goal>For users to gain legitimate access to the system</xuse:goal>
+		<xuse:primary-actor refId="user"/>
+		<xuse:pre-requisites>The user shall be previously registered with the system such that appropriate security credentials are held by the system.</xuse:pre-requisites>
+		<xuse:success-outcome>The user will have logged on and be granted access permissions as dictated by the configuration in the system.</xuse:success-outcome>
+		<xuse:failure-outcome>The user will not have been granted access to the system - a security administrator will have been informed of repeated failures.</xuse:failure-outcome>
+		<xuse:priority>1</xuse:priority>
+		<xuse:complexity>1</xuse:complexity>
+		<xuse:taxonomy classifier="target-release">release-1</xuse:taxonomy>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+		<xuse:step step-id="go-to-logon">
+            <xuse:description>The user navigates to the <xuse:req-ref refId="RQ13">web</xuse:req-ref> logon screen.</xuse:description>
+			<xuse:ref-alternate-flow refId="direct-page-access" condition="The user attempts to access a protected resource but is not logged on or their session has expired"/>
+		</xuse:step>
+		<xuse:step step-id="present-challenge">
+			<xuse:description>The system <xuse:req-ref refId="RQ3">challenges</xuse:req-ref> the user for a <xuse:req-ref refId="RQ1">username</xuse:req-ref> and <xuse:req-ref refId="RQ2">password</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="enter-details">
+			<xuse:annotation>
+				<xuse:description>We need to make sure that the website will <xuse:req-ref refId="RQ6">support SSL encryption</xuse:req-ref> such that the user's details are not transmitted in plain text across the web</xuse:description>
+				<xuse:author>odlingsmee</xuse:author>
+				<xuse:intended-audience>all</xuse:intended-audience>
+				<xuse:creation-date>2006-01-21</xuse:creation-date>
+			</xuse:annotation>
+            <xuse:description>The user enters their credentials and submits them to the system.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="lookup-auth-details">
+            <xuse:description>The system validates that the username and password credentials match those stored.</xuse:description>
+			<xuse:ref-alternate-flow refId="invalid-credentials" condition="Credentials supplied are not valid"/>
+			<xuse:ref-alternate-flow refId="invalid-credentials-attempts-exceeded" condition="Credentials supplied are not valid and permissible number of attempts exceeded"/>
+		</xuse:step>
+		<xuse:step step-id="lookup-up-permissions">
+            <xuse:description>The system loads up the set of <xuse:req-ref refId="RQ7">privileges appropriate to the user</xuse:req-ref>.</xuse:description>
+		</xuse:step>
+		<xuse:step step-id="load-home-page">
+            <xuse:description>The system presents the homepage to the user.</xuse:description>
+		</xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+	<xuse:alternate-flows>
+		<xuse:alternate-flow title="Accessing a protected page directly" id="direct-page-access">
+			<xuse:step step-id="direct-nav">
+				<xuse:description>The user navigates directly to a screen within the system website</xuse:description>
+			</xuse:step>
+			<xuse:step step-id="redirect-to-logon">
+				<xuse:description>The system re-directs the user to the logon screen.</xuse:description>
+			</xuse:step>
+			<xuse:rejoin at-step="present-challenge"/>
+		</xuse:alternate-flow>
+		<xuse:alternate-flow title="Invalid Credentials" id="invalid-credentials">
+			<xuse:step step-id="invalid-logon">
+				<xuse:description>The system determines that the user is still within their <xuse:req-ref refId="RQ5">permitted logon attempts</xuse:req-ref></xuse:description>
+			</xuse:step>
+			<xuse:step step-id="redirect-to-logon-for-another-attempt">
+				<xuse:description>The system re-directs the user to the logon screen.</xuse:description>
+			</xuse:step>
+			<xuse:rejoin at-step="present-challenge"/>
+		</xuse:alternate-flow>
+		<xuse:alternate-flow title="Invalid Credentials - number of attempts exceeded" id="invalid-credentials-attempts-exceeded">
+			<xuse:step step-id="invalid-logon-on-last-try">
+				<xuse:description>The system determines that the user has exhausted their <xuse:req-ref refId="RQ5">permitted logon attempts</xuse:req-ref></xuse:description>
+			</xuse:step>
+			<xuse:step step-id="redirect-to-authentication-failure-screen">
+				<xuse:description>The system re-directs the user to an authentication failure screen.</xuse:description>
+			</xuse:step>
+			<xuse:step step-id="inform-administrator">
+				<xuse:description>The system alerts the administrator of the failed logon attempts.</xuse:description>
+			</xuse:step>
+			<xuse:end/>
+		</xuse:alternate-flow>
+	</xuse:alternate-flows>
+</xuse:use-case>

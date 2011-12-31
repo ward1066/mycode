@@ -1,0 +1,9 @@
+<validation-errors>
+   <error>
+      <class>schema-validation</class>
+      <level>=</level>
+      <line-no></line-no>
+      <file></file>
+      <msg></msg>
+   </error>
+</validation-errors>

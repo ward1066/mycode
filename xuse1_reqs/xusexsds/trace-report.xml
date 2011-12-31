@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<xtp:xuse-trace-report xmlns:xtp="http://www.xml-soltuions.com/xuse/trace-report">
+  <xtp:implementation-artefact type="java:method" name="net.sourceforge.xuse.utils.SchemaUtils#validateXML">
+    <xtp:implements>RQ48</xtp:implements>
+  </xtp:implementation-artefact>
+  <xtp:implementation-artefact type="java:class" name="net.sourceforge.xuse.utils.PdfUtils">
+    <xtp:implements>RQ58</xtp:implements>
+    <xtp:implements>RQ59</xtp:implements>
+  </xtp:implementation-artefact>
+  <xtp:implementation-artefact type="xsl:stylesheet" name="xslts/reports/requirements-stability-html.xsl">
+    <xtp:implements>RQ72</xtp:implements>
+  </xtp:implementation-artefact>
+  <xtp:implementation-artefact type="xsl:stylesheet" name="xslts/reports/graph-utils.xsl">
+    <xtp:implements>RQ72</xtp:implements>
+  </xtp:implementation-artefact>
+  <xtp:implementation-artefact type="xsl:stylesheet" name="xslts/reports/requirements-status-html.xsl">
+    <xtp:implements>RQ72</xtp:implements>
+  </xtp:implementation-artefact>
+</xtp:xuse-trace-report>

@@ -1,0 +1,38 @@
+2011-12-31 10:28:24.924 GMT+10:30 [923950945:INFO] net.sourceforge.xuse.Xuse Processing complete in 0 mins 0 seconds
+2011-12-31 10:30:18.841 GMT+10:30 [924036961:INFO] net.sourceforge.xuse.Xuse Processing complete in 0 mins 0 seconds
+2011-12-31 10:30:54.568 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Schema validating XML model...
+2011-12-31 10:32:05.216 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing requirements
+2011-12-31 10:32:05.268 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating single requirements page
+2011-12-31 10:32:05.327 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing functional requirements
+2011-12-31 10:32:06.277 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 23 requirements of 23
+2011-12-31 10:32:06.301 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing non-functional requirements
+2011-12-31 10:32:06.712 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 14 requirements of 14
+2011-12-31 10:32:06.729 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing business requirements
+2011-12-31 10:32:06.812 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 3 requirements of 3
+2011-12-31 10:32:06.842 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing success-criteria requirements
+2011-12-31 10:32:06.908 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 2 requirements of 2
+2011-12-31 10:32:07.051 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing constraint requirements
+2011-12-31 10:32:07.096 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 1 requirements of 1
+2011-12-31 10:32:07.124 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing assumption requirements
+2011-12-31 10:32:07.169 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processed 1 requirements of 1
+2011-12-31 10:32:07.194 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case
+2011-12-31 10:32:07.223 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC1::Logon
+2011-12-31 10:32:07.424 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC8::Maintain Product Catalogue
+2011-12-31 10:32:07.640 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC3::View Sales
+2011-12-31 10:32:07.781 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC5::Checkout
+2011-12-31 10:32:07.907 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC6::View Products
+2011-12-31 10:32:08.008 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC4::Add to shopping cart
+2011-12-31 10:32:08.331 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC7::Manage Shopping Cart
+2011-12-31 10:32:08.439 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC9::Manage Orders
+2011-12-31 10:32:08.600 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing use-case: UC2::Manage Personal Details
+2011-12-31 10:32:08.876 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating use-case packages
+2011-12-31 10:32:08.991 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating index page
+2011-12-31 10:32:09.025 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating summary report
+2011-12-31 10:32:09.067 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating navigation page
+2011-12-31 10:32:09.090 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating hierarchy view of requirements...
+2011-12-31 10:32:09.109 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Created relationships temporary tree
+2011-12-31 10:32:10.068 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing actors
+2011-12-31 10:32:10.126 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing stakeholders
+2011-12-31 10:32:10.220 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Processing glossary
+2011-12-31 10:32:10.265 GMT+10:30 [924450657:INFO] {  at xuse:get-execution-context()}; Creating additional reports
+2011-12-31 10:32:10.279 GMT+10:30 [924450657:INFO] net.sourceforge.xuse.Xuse Processing complete in 1 mins 45 seconds

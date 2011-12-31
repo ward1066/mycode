@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC3" name="View Sales" model-version="0.3">	
+	<xuse:description>Allows merchants to view a report on sales activity for products that have been purchased via the system. The merchant can choose different report types, view the report online, print it or save it locally in a different formats.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.2 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2006-01-01</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.2</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2009-11-10</xuse:change-date>
+            <xuse:description>Completed sequence of events and added description.</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A merchant wishes to review recent sales on the system.</xuse:trigger>
+		<xuse:goal>To review the volume / value of sales of the merchants products.</xuse:goal>
+		<xuse:primary-actor refId="merchant"/>
+		<xuse:pre-requisites>The merchant shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref> and registered as a merchant.</xuse:pre-requisites>
+		<xuse:success-outcome>The merchant will have been able to view (and print) the volume / value of sales for the period they were interested in.</xuse:success-outcome>
+		<xuse:failure-outcome>The merchant will not have been able to access the sales reports - the system will have generated error messages and advice as to the appropriate recourse should they wish to obtain the details immediately.</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+	</xuse:use-case-properties>
+	<xuse:main-flow>
+	<xuse:step step-id="choose-report-type">
+            <xuse:description>The merchant selects the type of sales report they wish to see.</xuse:description>            
+        </xuse:step>
+        <xuse:step step-id="enter-report-parameters">
+            <xuse:description>The merchant enters parameters. Paremeters include product class, promotional codes and date range.</xuse:description>            
+        </xuse:step>
+        <xuse:step step-id="validate-report-params">
+            <xuse:description>The system validates that the report parameters have been entered correctly.</xuse:description>
+            <xuse:ref-exception-flow refId="invalid-report-parameters" condition="invalid report parameters entered"/>
+        </xuse:step>
+        <xuse:step step-id="execute-report">
+            <xuse:description>The system executes the report with the parameters supplied by the merchant.</xuse:description>
+            <xuse:ref-exception-flow refId="report-execution-error" condition="the system fails to succesfully execute the report"/>
+        </xuse:step>
+        <xuse:step step-id="display-report-results">
+            <xuse:description>The system presents the report results to the merchant.</xuse:description>   
+            <xuse:ref-alternate-flow refId="export-report" condition="the merchant wishes to save a copy of the report"/>     
+            <xuse:ref-alternate-flow refId="select-new-report" condition="the merchant wishes to run a different report"/>         
+        </xuse:step>
+        <xuse:end/>
+    </xuse:main-flow>
+    <xuse:alternate-flows>
+       <xuse:alternate-flow title="Export Report" id="export-report">
+           <xuse:step step-id="select-report-export-format">
+               <xuse:description>The merchant selects the output format of the report.</xuse:description>
+           </xuse:step>
+           <xuse:step step-id="select-destination">
+               <xuse:description>The merchant selects where the report should be exported to.</xuse:description>
+           </xuse:step>
+           <xuse:rejoin at-step="display-report-results"/>
+       </xuse:alternate-flow>
+       <xuse:alternate-flow title="Select a new report" id="select-new-report">
+           <xuse:step step-id="select-alternate-report">
+               <xuse:description>The merchant selects a different report to the one currently displayed.</xuse:description>
+           </xuse:step>
+           <xuse:rejoin at-step="enter-report-parameters"/>
+       </xuse:alternate-flow>
+    </xuse:alternate-flows>
+    <xuse:exception-flows>
+       <xuse:exception-flow title="Invalid report parameters" id="invalid-report-parameters">
+           <xuse:step step-id="display-validation-errors">
+               <xuse:description>The systems highlights validation errors to the merchant and prompts the merchant to correct the errors.</xuse:description>
+           </xuse:step>
+           <xuse:rejoin at-step="enter-report-parameters"/>
+       </xuse:exception-flow>
+       <xuse:exception-flow title="Report error" id="report-execution-error">
+           <xuse:step step-id="report-execution-failed">
+               <xuse:description>The system cannot run the report due to a technical fault.</xuse:description>
+           </xuse:step>
+           <xuse:step step-id="display-error">
+               <xuse:description>The systems informs the merchant of the issue and (where possible) advises them of the best possible course of action.</xuse:description>
+           </xuse:step>
+           <xuse:end/>
+       </xuse:exception-flow>
+    </xuse:exception-flows>
+</xuse:use-case>

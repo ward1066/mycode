@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--        
+        Created: Mike Odling-Smee
+        $Author: odlingsmee $
+        $Revision: 1.6 $ $Date 2006/01/14 16:16:06$
+        Log$
+-->
+<xuse:stakeholders 
+        xmlns:xuse="http://xuse.sourceforge.net"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xuse.sourceforge.net ../../xusexsds/stakeholders.xsd" model-version="0.3">
+    
+    
+    <xuse:stakeholder id="user">
+        <xuse:title>User</xuse:title>
+        <xuse:description>General user of the system</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+    
+    <xuse:stakeholder id="vendor">
+        <xuse:title>Vendor</xuse:title>
+        <xuse:description>General vendor of goods that will sell their goods or services via the system.</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+    
+    <xuse:stakeholder id="service-management">
+        <xuse:title>Service Management</xuse:title>
+        <xuse:description>Service management will run and administer the system from an operational perspective.</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+
+    <xuse:stakeholder id="security">
+        <xuse:title>Security</xuse:title>
+        <xuse:description>The department responsible for ensuring security of the application and application data.</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+	
+	<xuse:stakeholder id="marketing">
+        <xuse:title>Marketing</xuse:title>
+        <xuse:description>The marketing department. The marketing department not only have a say in how the product should look and feel, how it should be portrayed, but they are also very keen that certain aspects of the product (such as usability and security) do not detract from the product's reputation.</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+    
+    <xuse:stakeholder id="management">
+        <xuse:title>Corporate Management</xuse:title>
+        <xuse:description>The business leaders in <xuse:customer/>. They have a vested interest that <xuse:project/> is delivers improved functionality and streamlines the sales ordering process.</xuse:description>
+        <xuse:role/>
+    </xuse:stakeholder>
+
+</xuse:stakeholders>

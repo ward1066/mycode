@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0; 
+	font: normal 0.8em/1.4em Tahoma, Verdana, Arial, Georgia, sans-serif; 
+	color: #B0A77E;
+}
+
+a, a:visited {
+	font-weight: normal;
+	text-decoration: none;
+	color: #D7661C;
+}
+
+a:hover {
+	font-weight: normal;
+	text-decoration: none;
+	color: #94AB36;
+	border-bottom: 1px solid #ccc;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+h1, .heading1 {
+    font-size: 14pt;    
+    text-align: center;
+    font-weight: bold;
+    color: #669966;
+}
+
+h2, .heading2 {
+	margin-top: 10px;
+	margin-left: 4%;
+	padding:5px;
+	padding-left: 0px;
+    padding-top: 2px;
+    margin-right: 4%;
+    font-size: 12pt;
+    height:18px;
+	text-align: left;
+	color: #669966;
+}
+h3, .heading3 {
+	margin-left: 4%;
+	padding:5px;
+	padding-left: 0px;
+    padding-top: 2px;
+    margin-right: 4%;
+    height:16px;
+	text-align: left;
+	font-size:10pt;
+	color: #666666;
+}
+
+.sequence p {
+	padding:3px;
+}
+
+#use-case-description, p.emphasis {
+    margin-left: 8%;
+    margin-right: 10%;   
+    padding:3px;
+}
+
+.actor, .stakeholder {
+    margin-left: 8%;
+    margin-right: 10%;   
+    border: 0px;
+    border-top: 0px;
+    padding:3px;
+}
+
+.sequence {
+	margin-left: 12%;
+	margin-right: 10%;  
+    border: 0px;
+    border-left:#ddd 1px solid;
+	border-bottom: solid #eee 1px;
+}
+
+#use-case-properties ul, #stakeholder-list ul, #use-case-business-rules ul, #document-history ol, #document-information ul, #index ul, #glossary ul {
+    padding-bottom: 3px;
+}
+
+#use-case-properties li, #stakeholder-list li, #use-case-business-rules li, #document-history, #document-information li, #index li, #glossary li {
+    border-left:#ddd 1px solid;
+    border-bottom: 0px;
+    padding: 3px;
+    padding-right: 0px;
+}
+
+#use-case-properties li.last, #stakeholder-list li.last, #use-case-business-rules li.last, #document-history li.last, , #document-information li.last, #glossary li.last {
+	padding-bottom: 3px;
+	border-left:#ddd 1px solid;
+	border-bottom: solid #eee 1px;
+}
+
+.property {
+    font-weight: bold;
+    text-align: left;
+}
+
+.value {
+	text-align: left;
+}
+
+th {
+    background-color: #999999;
+    color: #fff;
+}
+
+tr, td, th {
+	border-color: beige;
+}
+
+td.even, td {
+	background-color: #eee;
+}
+
+table.standard {
+    border: solid beige 1px;
+}
+
+table.standard th, table.standard td, , table.standard tr {
+   border: solid beige 1px;
+}
+
+table.standard tr {
+  background-color: #eee;
+}
+
+.req-detail {
+    align: top;
+}
+
+li.req-detail {
+    border-bottom: solid;
+}
+
+.bar-colour-1 {
+    background-color:beige;
+}
+
+.bar-colour-2 {
+    background-color:#94AB36;
+}

@@ -1,0 +1,321 @@
+body {
+	font-family: Verdana, Tahoma, Arial;
+	background-color: #ccc;
+	color: black;
+	padding:0 0 0 0; 
+	margin:0px 5px 0px 5px;
+    height: 100%;
+}
+
+div {
+    padding: 0pt;
+    margin: 0pt;
+}
+
+table {
+    font-size: 0.75em;
+	width: 95%;
+	margin: 10px 0 10px 0;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.annotation {
+	position: absolute;
+	left: 600px;
+	float: right;
+	width: 303px;
+}
+
+.annotation-content {
+    background: #fafa88;
+	border: 1px solid #666;
+	border-top: 0px;
+	padding: 2px;
+}
+
+.annotation-header {
+	margin-top: 2px;
+	background: url(../images/note-background-top.png) left top no-repeat;
+	padding-top: 2px;
+	padding-left: 7px;
+	font-size: smaller;
+	font-style: italic;
+	height: 14px;
+}
+
+.comment-author {
+    margin-top: 2px;
+    padding-top: 2px;
+    padding-left: 2px;
+    font-size: smaller;
+    font-style: italic;
+    height: 14px;
+}
+
+
+
+caption {
+	text-align: left;
+	padding: 10px 8px 2px 4px;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.5em;
+}
+
+a, a:visited, a:hover { 
+    font-weight: bold;
+	color:#476575; 
+	text-decoration:none; 
+}
+a:hover {
+    color: red;
+	text-decoration: underline;
+}
+
+a.glossary-link, a:hover.glossary-link {
+	text-decoration: none;
+}
+
+.glossary-link { 
+    border-bottom: 1px dotted #cccccc;
+    cursor:help;
+}
+
+h1, .heading1 {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 12px;
+}
+
+h2, .heading2 {
+    font-size: 1.2em;
+    color: #333333;  
+    padding-left: 2px;
+    padding-bottom: 2px;
+}
+h3, .heading3 {
+    padding: 4px 4px 4px 0px;
+    margin-left: 20px;
+    color: #666;
+    font-weight: bold;
+    font-size: 1,2em;
+}
+
+#use-case, #requirements, #index, #actors, #stakeholders, #glossary, #document {
+    float: left;
+    width: 600px;
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+#use-case-description, p.emphasis {
+    margin-top: 5px;
+    margin-left: 8%;
+    margin-right: 10%;   
+    padding:5px;
+}
+
+.offset-text {
+    margin: 0px;
+    margin-left: 8%;
+    margin-right: 10%;   
+    padding: 0px;
+    
+}
+
+#use-case-properties ul, #use-case-business-rules ul, ul.requirements-list-title-only, ul.requirements-list-description, #stakeholder-list ul, ul.use-case-list-description, #document-history ol, #document-information ul, #index ul, #glossary ul {
+    margin-left: 8%;
+	padding:5px;
+	padding-left: 0px;
+    padding-top: 2px;
+    margin-top: 0px;
+    margin-right: 10%;
+}
+
+#use-case-properties li, #use-case-business-rules li, li.requirements-list-title-only, li.requirements-list-description, #stakeholder-list li, li.use-case-list-description, #document-history li, #document-information li, #index li, #glossary li {
+    list-style-type: none;
+    text-align: left;
+    border-bottom: 1px dashed #cccccc;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    background: none;
+    width: auto;
+}
+
+
+
+.sequence {
+    margin-left: 8%;
+    margin-right: 10%;   
+}
+
+tr, td, th {
+    border-color: white;
+}
+
+th {
+    background-color: #476575;
+    color: #F4FC20;
+}
+
+table.standard {
+    border-collapse: collapse;
+}
+
+table.standard th, table.standard td, , table.standard tr {
+   padding: 5px;
+}
+
+table.standard tr {
+  background-color: #CFECFC;
+}
+
+table.req-detail-table {
+    font-size: 0.95em;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+table.graph {
+    border-collapse: collapse;
+}
+
+table.graph th, table.graph td, , table.graph tr {
+   padding: 0px;
+   background-color: white;
+}
+
+
+
+td.req-detail-area {
+    vertical-align: top;
+	background-color:#E6E6FA;
+}
+
+ul.req-detail {
+    margin-left: 8%;
+    padding:5px;
+    padding-left: 0px;
+    padding-top: 2px;
+    margin-top: 0px;
+    margin-right: 10%;
+}
+
+li.req-detail {
+    list-style-type: none;
+    text-align: left;
+    border-bottom: 1px dashed #cccccc;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    background: none;
+    width: auto;
+}
+
+.property, li.property {
+    font-weight: bold;
+    text-align: left;
+    padding-right: 8px;
+}
+
+.value, li.property {
+    text-align: right;
+}
+
+#footer {
+	margin: 0px;
+	padding: 0px;
+    font-size: 0.65em;
+	text-align: right;
+	clear: both;
+	border-top: 1px dotted #aaa;
+}
+
+#navigation-container {
+    background-color: white;
+    margin-top: 10px;
+    padding: 0px;
+    height: 90%;
+    border:#aaa 1px solid;
+}
+
+#navigation {
+    background-color: white;
+    margin: 0pt;
+    padding: 0pt;
+    padding-left: 5px;
+    
+}
+
+.nav-entry {
+    white-space:nowrap;
+    margin: 0px;
+    padding: 0px;
+    line-height: 7px;
+    height: 16px;
+}
+
+.nav-text {    
+    font-size: 0.7em;
+    padding-left: 2px;
+    vertical-align:middle;
+}
+
+.FATAL {
+    color: purple;
+}
+
+.ERROR {
+    color: red;
+}
+
+.document-error-message {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.WARN {
+    color: orange;
+}
+
+.graph-label {
+	font-size: 1.1em;
+}
+
+.banner-body {
+    background: #ccc;
+}
+
+#banner {
+    margin-top: 5px;
+    width: 1022px;
+    background: white;
+    border:#aaa 1px solid;   
+}
+
+#banner-image-left {
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+#banner-image-right {
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+#banner-heading {
+    font-size: 1.2em;    
+    text-align: left;
+    margin-left: 410px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 2px;
+}

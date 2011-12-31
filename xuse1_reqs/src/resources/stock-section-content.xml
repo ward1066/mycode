@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stock-content [
+ <!ELEMENT stock-content (stock-paragraph*,stock-section*) >
+ <!ATTLIST stock-content xmlns:xuse CDATA #IMPLIED
+                         xmlns:xhtml CDATA #IMPLIED
+                         xmlns:xi CDATA #IMPLIED>
+ <!ATTLIST stock-content model-version CDATA #REQUIRED>
+ <!ELEMENT stock-paragraph (description,content) >
+ <!ELEMENT stock-section (description,content) >
+ <!ELEMENT description (#PCDATA) >
+ <!ELEMENT xuse:p ANY >
+ <!ELEMENT xuse:section ANY >
+ <!ELEMENT content ANY >
+ <!ATTLIST xuse:p id ID #IMPLIED>
+ <!ATTLIST xuse:section id ID #IMPLIED
+                        title CDATA #IMPLIED>
+]>
+<stock-content model-version="0.3"
+        xmlns:xuse="http://xuse.sourceforge.net"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <!-- An example simple section -->
+    <stock-section>
+        <description>
+            Complete Vision document introductory section.
+        </description>
+        <content>
+            <xuse:section id="vision-intro-simple-section" title="Simple Imported Introduction">
+                <xuse:p>I have been imported from pure-stock-content.xml</xuse:p>
+            </xuse:section>
+        </content>
+    </stock-section>
+    
+    <!-- An example composite section -->
+    <stock-section>
+        <description>Complete Vision document introductory section.</description>
+        <content>
+            <xuse:section id="vision-intro-section" title="Introduction">
+                <xi:include href="stock-paragraph-content.xml" xpointer="vision-intro-description"/>
+                <xi:include href="stock-paragraph-content.xml" xpointer="vision-intro-context"/>
+                <xi:include href="stock-paragraph-content.xml" xpointer="vision-intro-doclife-para"/>
+                <xuse:section id="vision-audience" title="Document Audience">
+                    <xi:include href="stock-paragraph-content.xml" xpointer="vision-intro-audience-para"/>
+                </xuse:section>
+            </xuse:section>
+        </content>
+    </stock-section>
+    
+    <stock-section>
+        <description>Complete SRS document introductory section.</description>
+        <content>
+            <xuse:section id="srs-intro-section" title="Introduction">
+                <xuse:p>TODO</xuse:p>
+            </xuse:section>
+        </content>
+    </stock-section>	        
+    
+</stock-content>

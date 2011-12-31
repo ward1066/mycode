@@ -1,0 +1,108 @@
+body {
+	background-image: url(images/background.gif);
+}
+
+p, ol, ul, #use-case-description {
+    font-size: 0.8em;
+}
+
+table {    
+    border: #ccc solid 1px;
+}
+
+tr, td, th {
+	border: white solid 1px;
+	vertical-align: top;
+	padding: 5px;
+}
+
+th {
+	background-color: #476575;
+	color: #F4FC20;
+}
+
+table.simple td {
+	background-color: #CFECFC;
+}
+
+h1, .heading1 {
+    color: #476575;
+    font-family: Georgia, Eurostyle, garamond, arial;
+    border-bottom: 2px solid #ccc;
+}
+
+h2, .heading2 {
+    color: #476575;
+    font-family: Georgia, Eurostyle, garamond, arial;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+h3, .heading3 {
+    width: 100%
+    border-bottom: 1px dotted #ccc;
+}
+
+#use-case-description, p.emphasis {
+    background-color:beige;
+    border:1px dotted #aaaaaa;
+}
+
+.bar-colour-1 {
+    background-color:#CFECFC;
+	border: 0pt;
+}
+
+.bar-colour-2 {
+    background-color:#476575;
+	border: 0pt;
+}
+
+tr.graph, td.graph {
+	background-color:#FFFFFF;
+}
+
+.glossary-link { 
+    color: #666;
+}
+
+#banner-heading {
+    color: #476575;
+}
+
+table.req-detail-table, table.req-detail-table tr, table.req-detail-table td {
+    border: 0px;
+    background-color:#E6E6FA;
+}
+
+table.req-detail-table tr {
+    border-bottom: 1px dotted #ccc;
+}
+
+table.req-detail-table tr.last-row {
+    border-bottom: 0px;
+}
+
+
+table.req-detail-table td.property {
+    text-align: right;
+    width: 12.5em;
+    font-weight: bold;
+    margin-right: 20px;
+    border-right: 1px dotted #ccc;
+    color: #444;
+}
+
+table.req-detail-table td.value {
+    text-align: left;
+}
+
+.glossary-title {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.glossary-abbreviation {
+    font-weight: bold;
+}
+

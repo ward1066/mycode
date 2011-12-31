@@ -1,0 +1,70 @@
+ID,REQ_VERSION,TITLE,DESCRIPTION,CREATION_DATE,MODIFICATION_DATE,PACKAGE,STATUS,TYPE,STRENGTH,FEATURE,ANNOTATION,ANNOTATION_AUTHOR,ANNOTATION_AUDIENCE,ANNOTATION_DATE,PARENT,RELATED_REQ ,RELATED_REQ ,STAKEHOLDER ,STAKEHOLDER ,STAKEHOLDER ,STAKEHOLDER ,STAKEHOLDER ,STAKEHOLDER ,TAX-target-release
+RQ0,1.5,"Secured Logon","The system shall prevent un-authorised access to a user's account.",2006-05-21,2009-12-15T18:11:42,"security.authentication","proposed","functional",shall,true,,,,,, , ,security ,marketing , , , , ,release-1
+RQ1,1.8,"Unique Username","The system shall identify users via a unique username.",2006-05-21,2009-12-15T18:14:19,"data","proposed","functional",shall,false,,,,,RQ0, , ,security , ,user , , , ,release-1
+RQ2,1.8,"Password","The system shall store passwords against each username.",2006-05-21,2009-12-15T18:12:52,"security.authentication","proposed","functional",shall,false,,,,,RQ0, , ,security , ,user , , , ,release-1
+RQ3,1.3,"Authentication","Authentication shall be established based on the correct username and password combination.",2006-05-21,2009-12-15T18:08:18,"security.authentication","proposed","functional",shall,false,,,,,RQ0, , ,security , ,user , , , ,release-1
+RQ4,1.1,"Password Structure","The system shall only allow passwords greater than eight characters long being a mixture of alpha-numerics.",2006-05-21,2006-05-23,"security.authentication","proposed","functional",shall,false,,,,,RQ2, , ,security , ,user , , , ,
+RQ5,1.2,"Failed Logons","If a logon attempt is unsuccesful the system shall inform the user, however specfic reasons for the failure shall not be communicated as this information can prove useful for malicious authentication attempts.",2006-05-21,2009-12-15T18:13:16,"security.authentication","proposed","functional",shall,false,,,,,RQ3, , ,security , , , , , ,
+RQ6,1.1,"SSL Encryption","The system's website should support SSL Encryption to prevent data being sniffed by malicious parties.",2006-05-21,2006-05-23,"security.authentication","proposed","non-functional",should,false,"
+            TLS should probably be used in preference to SSL
+            - this is still under investigation.
+      ","odlingsmee",internal,2006-05-23,, , , , , , , , ,release-1
+RQ7,1.3,"Authorisation","The system shall store permissions against each user such that their level of access to the system can be controlled.",2006-05-21,2009-12-15T18:37:28,"security.authorisation","proposed","non-functional",shall,true,,,,,, , ,security , , , , , ,
+RQ8,1.0,"Personal Information","The system shall store certain personal information about each user on the system.",2006-05-21,2006-05-21,"data","proposed","functional",shall,false,,,,,, , , ,marketing ,user , , , ,
+RQ9,1.0,"First Name","The system shall store a first name against each user.",2006-05-21,2006-05-21,"data","proposed","functional",shall,false,,,,,RQ8, , , , , , , , ,
+RQ10,1.0,"Last Name","The system shall store a last name against each user.",2006-05-21,2006-05-21,"data","proposed","functional",shall,false,,,,,RQ8, , , , , , , , ,
+RQ11,1.0,"Address","The system shall store an address against each user.",2006-05-21,2006-05-21,"data","proposed","functional",shall,false,,,,,RQ8, , , , , , , , ,
+RQ12,1.0,"Names fields","Name fields should be at least one character in length.",2006-05-21,2006-05-21,"data","proposed","functional",shall,false,,,,,RQ8,RQ9 ,RQ10 , , , , , , ,
+RQ13,1.1,"Web UI","The user interface shall be a web based (HTTP) user interface to ease deployment and accesibility.",2006-08-07,2009-12-15T17:54:56,"gui","proposed","non-functional",shall,true,,,,,, , , , , , , , ,
+RQ14,1.1,"Multi-currency support","The application shall support multiple-currencies.",2009-09-30,2009-12-15T18:39:13,"system.p2p","proposed","non-functional",shall,true,,,,,, , , , , , , , ,
+RQ15,1.0,"USD currency support","The application shall support payment in USD ($).",2009-09-30,2009-09-30,"system.p2p","proposed","non-functional",shall,false,,,,,RQ14, , , , , , , , ,
+RQ16,1.0,"GBP currency support","The application shall support payment in GBP (£).",2009-09-30,2009-09-30,"system.p2p","proposed","non-functional",shall,false,,,,,RQ14, , , , , , , , ,release-1
+RQ17,1.1,"Euro currency support","The application shall support payment in Euro ().",2009-09-30,2009-12-15T17:42:37,"system.p2p","proposed","non-functional",shall,false,,,,,RQ14, , , , , , , , ,release-2
+RQ18,1.1,"Shopping cart running total","The application shall calculate a running total of all the products in the shopping cart. This will not include shipping or gift wrap costs.",2009-09-30,2009-12-15T18:45:29,"system.p2p","proposed","functional",shall,false,,,,,RQ26, , , , , , , , ,
+RQ19,1.3,"Shopping cart default quantities","When products are added to the cart the system shall assume a quantity of 1 (one) is required.",2009-09-30,2009-12-15T18:46:14,"system.p2p","proposed","functional",shall,false,,,,,RQ26, , , , , , , , ,
+RQ20,1.0,"Product already in cart","When a product that aleady exists is added to the shopping cart, the system shall increment the quantity by 1 (one).",2009-09-30,2009-09-30,"system.p2p","proposed","functional",shall,false,,,,,RQ19, , , , , , , , ,
+RQ21,1.14,"View personal demographic  information","The system shall allow the user to view the demographic information it holds about them.",2009-12-15T17:53:54,2009-12-15T18:07:25,"gui","proposed","functional",shall,true,,,,,RQ8, , , , ,user , , , ,release-1
+RQ22,1.9,"Edit personal demographic information","The system shall allow the user to edit their personal demographic information.",2009-12-15T18:03:59,2009-12-15T18:05:54,"gui","proposed","functional",shall,false,,,,,RQ8, , , ,marketing ,user , , , ,release-1
+RQ23,1.13,"Role based controls","The system shall support roles to aid with the managment of granular permissions.",2009-12-15T18:14:46,2009-12-15T18:38:04,"security.authorisation","proposed","non-functional",shall,false,,,,,RQ7, , ,security , , ,service-management , , ,release-1
+RQ24,1.6,"Role multiplicity","The system shall allow a user to be associated with one or more roles. Their permissions will be the union of the permissions defined by each of their roles.",2009-12-15T18:18:38,2009-12-15T18:37:13,"security.authorisation","proposed","non-functional",shall,false,,,,,RQ23, , ,security , , , , , ,release-1
+RQ25,1.5,"Select products for purchase","The system shall allow the buyer to select products for purchase",2009-12-15T18:39:13,2009-12-15T18:41:05,"system.p2p","proposed","functional",shall,false,,,,,, , , , ,user , ,vendor , ,release-1
+RQ26,1.5,"Shopping Cart","The system shall support the concept of a user's shopping cart such that zero or more items can be stored for purchase.",2009-12-15T18:41:05,2009-12-15T18:45:21,"system.p2p","proposed","functional",shall,true,,,,,, , , , ,user , ,vendor , ,release-1
+RQ27,1.5,"Permission based controls","The system shall only allow access to functions that are associated with the permissions of the current user.",2009-12-15T18:48:42,2009-12-15T18:50:44,"security.authorisation","proposed","non-functional",shall,true,,,,,RQ7, , ,security , , , , , ,release-1
+BO-1,1.1,"To Improve UK market share by upwards of 1.5%.","
+      Efficiencies and improved usability must allow
+       
+      to reach out more effectively to its customers to improve sales and customer retention.
+    ",2010-01-15,2010-01-15,"busines-drivers","proposed","business",shall,false,,,,,, , , ,marketing , , , ,management ,
+BO-2,1.1,"Eliminate the need to re-key web order data thus saving 2 FTE.","The solution must integrate with the backend CRM system such that manual re-keying of order information is not required.",2010-01-15,2010-01-15,"busines-drivers","proposed","business",shall,false,,,,,, , , , , , , ,management ,
+BO-3,1.1,"Reduce vendor management overheads by 20%.","
+      Currently it is difficult for vendors that sell products via
+       
+      to track the number and payment status of orders placed via the system. Integration with the backend CRM would not only allow them to track orders and payments made via the web sales channel but also allow them to view orders placed by phone and mail.
+    ",2010-01-15,2010-01-15,"busines-drivers","proposed","business",shall,false,,,,,, , , , , , , ,management ,
+SC-1,1.1,"Achieve a 50% increase in user customer satisfaction within 6 months of go-live.","Improve buyer customer satisfaction such that they are likely to want to use the site more.",2010-01-15,2010-01-15,"busines-drivers","proposed","success-criteria",shall,false,,,,,, , , , ,user , ,vendor ,management ,
+SC-2,1.1,"Achieve a 25% increase in vendor customer satisfaction within 6 months of go-live.","
+      Improve buyer customer satisfaction such that they are likely to continue to do business with
+       
+      .
+    ",2010-01-15,2010-01-15,"busines-drivers","proposed","success-criteria",shall,false,,,,,, , , , , , ,vendor ,management ,
+CO-1,1.1,"
+       
+      must be built in Java
+    ","
+       
+      must be built in Java such that it can be maintained and extended by the in-house IT department.
+    ",2010-01-16,2010-01-16,"system","proposed","constraint",shall,false,,,,,, , , , , , , ,management ,
+AS-1,1.1,"
+      The new
+       
+      corporate branding will be availble in time for release 1
+    ","The corporate barnding must be avaible prior to system test of release 1.",2010-01-16,2010-01-16,"system","proposed","assumption",shall,false,,,,,, , , , , , , ,management ,
+RQ28,1.7,"Order tracking","The system shall allow orders to be tracked both buy buyers, vendors and service personnel.",2010-01-31T12:15:02,2010-01-31T12:24:32,"system.orders","proposed","functional",shall,false,,,,,, , , ,marketing ,user ,service-management ,vendor , ,release-2
+RQ29,1.11,"Associate orders with buyers","The buyer's unique username shall be associated with any order he or she places",2010-01-31T12:24:32,2010-01-31T12:29:01,"system.orders","proposed","functional",shall,false,,,,,RQ28, , , , ,user ,service-management ,vendor , ,release-1
+RQ30,1.8,"Associate order line item with a vendor","The system shall associate order line items with a vendor via a unique vendor id.",2010-01-31T12:29:21,2010-01-31T12:40:56,"system.orders","proposed","functional",shall,false,,,,,RQ28, , , , ,user ,service-management ,vendor , ,release-1
+RQ31,1.8,"Restrict list of orders","The system shall restrict the list of orders visible to the user such that they cannot review orders that are not associated with them.",2010-01-31T12:32:07,2010-01-31T12:38:33,"system.orders","proposed","non-functional",shall,false,,,,,RQ28, , ,security , ,user ,service-management ,vendor , ,release-2
+RQ32,1.7,"Users can only see their orders","Users shall only be allowed to see orders that they have placed",2010-01-31T12:34:00,2010-01-31T12:38:30,"system.orders","proposed","non-functional",shall,false,,,,,RQ31, , ,security , ,user , , , ,release-1
+RQ33,1.6,"Vendors can only see orders associated with them","Vendors can only see orders associated with them by virtue of having one or more line items placed with them. Should the order also contain line items placed with a different vendor, these details will not be accessible.",2010-01-31T12:35:23,2010-01-31T12:38:23,"system.orders","proposed","non-functional",shall,false,,,,,RQ31, , ,security , , , ,vendor , ,release-2
+RQ34,1.7,"Service personnel can view all orders","Service personnel shall be able view all orders on the system such that can help with any support queries placed by the buyer and/or vendor.",2010-01-31T12:40:56,2010-01-31T12:42:41,"system.orders","proposed","non-functional",shall,false,,,,,RQ31, , ,security , ,user ,service-management ,vendor , ,release-2
+RQ35,1.8,"Order list presentation order","When a user searches for orders the list should be presented with open orders first with secondary sorting being via order date in reverse chronological order (newest orders first).",2010-01-31T12:43:25,2010-01-31T12:45:20,"system.orders","proposed","functional",shall,false,,,,,RQ28,RQ31 , , , ,user ,service-management ,vendor , ,release-2
+RQ36,1.8,"Order summary data","The following should be displayed on the order summary list. Order date/time, order (overall) status, order price,  estimated compltetion date (if known), buyer and vendor details.",2010-01-31T12:46:06,2010-01-31T12:49:18,"system.orders","proposed","functional",shall,false,,,,,RQ28,RQ31 , , , ,user ,service-management ,vendor , ,release-2

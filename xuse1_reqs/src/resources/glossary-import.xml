@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:glossary xmlns:xuse="http://xuse.sourceforge.net" xmlns:xhtml="http://www.w3.org/1999/xhtml" model-version="0.3">
+   <xuse:entry>
+      <xuse:title>Three Letter Acronym</xuse:title>
+      <xuse:abbreviation>TLA</xuse:abbreviation>
+      <xuse:description></xuse:description>
+   </xuse:entry>
+   <xuse:entry>
+      <xuse:title></xuse:title>
+      <xuse:abbreviation>GBP</xuse:abbreviation>
+      <xuse:description>Stands for Great British Pounds</xuse:description>
+   </xuse:entry>
+   <xuse:entry>
+      <xuse:title>United Kingdom</xuse:title>
+      <xuse:abbreviation>UK</xuse:abbreviation>
+      <xuse:description>The United Kingdom of Great Britain and Northern Ireland (commonly known as the United Kingdom, the UK, or Britain) is a sovereign state located off the northwestern coast of continental Europe. It is an island country, spanning an archipelago including Great Britain, the northeastern part of Ireland, and many small islands. Northern Ireland is the only part of the UK with a land border, sharing it with the Republic of Ireland. Apart from this land border,the UK is surrounded by the Atlantic Ocean, the North Sea, the English Channel and the Irish Sea. The largest island, Great Britain, is linked to France by the Channel Tunnel.</xuse:description>
+   </xuse:entry>
+</xuse:glossary>

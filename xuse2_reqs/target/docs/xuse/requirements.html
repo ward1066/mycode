@@ -1,0 +1,3412 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>xuse:: requirements</title>
+      <link type="text/css" href="css/core.css" rel="stylesheet">
+      <link type="text/css" href="css/xuse-standard.css" rel="stylesheet"><script type="text/javascript" src="js/script.js"></script></head>
+   <body>
+      <div id="requirements">
+         <h1> requirements</h1>
+         <h3>functional</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="RQ0-div">
+                  <tr id="RQ0">
+                     <td align="center"><a href="javascript:toggle('d340e2-detail', 'd340e2-toggle-button')"><img name="d340e2-toggle-button" src="images/plus.png" alt="RQ0 details" border="0"></a></td>
+                     <td>RQ0</td>
+                     <td>1.5</td>
+                     <td>MUST</td>
+                     <td><span class="property">Secured Logon</span>The system shall prevent un-authorised access to a user's account.
+                     </td>
+                  </tr>
+                  <tr id="d340e2-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ1">[RQ1] Unique Username</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ2">[RQ2] Password</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ3">[RQ3] Authentication</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#marketing">Marketing</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ1-div">
+                  <tr id="RQ1">
+                     <td align="center"><a href="javascript:toggle('d340e18-detail', 'd340e18-toggle-button')"><img name="d340e18-toggle-button" src="images/plus.png" alt="RQ1 details" border="0"></a></td>
+                     <td>RQ1</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Unique Username</span>The system shall identify users via a unique username.
+                     </td>
+                  </tr>
+                  <tr id="d340e18-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ0">[RQ0] Secured Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ2-div">
+                  <tr id="RQ2">
+                     <td align="center"><a href="javascript:toggle('d340e35-detail', 'd340e35-toggle-button')"><img name="d340e35-toggle-button" src="images/plus.png" alt="RQ2 details" border="0"></a></td>
+                     <td>RQ2</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Password</span>The system shall store passwords against each username.
+                     </td>
+                  </tr>
+                  <tr id="d340e35-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ0">[RQ0] Secured Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ4">[RQ4] Password Structure</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ3-div">
+                  <tr id="RQ3">
+                     <td align="center"><a href="javascript:toggle('d340e52-detail', 'd340e52-toggle-button')"><img name="d340e52-toggle-button" src="images/plus.png" alt="RQ3 details" border="0"></a></td>
+                     <td>RQ3</td>
+                     <td>1.3</td>
+                     <td>MUST</td>
+                     <td><span class="property">Authentication</span>Authentication shall be established based on the correct username and password combination.
+                     </td>
+                  </tr>
+                  <tr id="d340e52-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ0">[RQ0] Secured Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ5">[RQ5] Failed Logons</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ4-div">
+                  <tr id="RQ4">
+                     <td align="center"><a href="javascript:toggle('d340e69-detail', 'd340e69-toggle-button')"><img name="d340e69-toggle-button" src="images/plus.png" alt="RQ4 details" border="0"></a></td>
+                     <td>RQ4</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Password Structure</span>The system shall only allow passwords greater than eight characters long being a mixture of alpha-numerics.
+                     </td>
+                  </tr>
+                  <tr id="d340e69-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ2">[RQ2] Password</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ5-div">
+                  <tr id="RQ5">
+                     <td align="center"><a href="javascript:toggle('d340e84-detail', 'd340e84-toggle-button')"><img name="d340e84-toggle-button" src="images/plus.png" alt="RQ5 details" border="0"></a></td>
+                     <td>RQ5</td>
+                     <td>1.2</td>
+                     <td>MUST</td>
+                     <td><span class="property">Failed Logons</span>If a logon attempt is unsuccesful the system shall inform the user, however specfic reasons for the failure shall not be communicated
+                        as this information can prove useful for malicious authentication attempts.
+                     </td>
+                  </tr>
+                  <tr id="d340e84-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ3">[RQ3] Authentication</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ8-div">
+                  <tr id="RQ8">
+                     <td align="center"><a href="javascript:toggle('d340e142-detail', 'd340e142-toggle-button')"><img name="d340e142-toggle-button" src="images/plus.png" alt="RQ8 details" border="0"></a></td>
+                     <td>RQ8</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">Personal Information</span>The system shall store certain personal information about each user on the system.
+                     </td>
+                  </tr>
+                  <tr id="d340e142-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ9">[RQ9] First Name</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ10">[RQ10] Last Name</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ11">[RQ11] Address</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ12">[RQ12] Names fields</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ21">[RQ21] View personal demographic ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ22">[RQ22] Edit personal demographic ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#marketing">Marketing</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ9-div">
+                  <tr id="RQ9">
+                     <td align="center"><a href="javascript:toggle('d340e156-detail', 'd340e156-toggle-button')"><img name="d340e156-toggle-button" src="images/plus.png" alt="RQ9 details" border="0"></a></td>
+                     <td>RQ9</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">First Name</span>The system shall store a first name against each user.
+                     </td>
+                  </tr>
+                  <tr id="d340e156-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ12">[RQ12] Names fields</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ10-div">
+                  <tr id="RQ10">
+                     <td align="center"><a href="javascript:toggle('d340e169-detail', 'd340e169-toggle-button')"><img name="d340e169-toggle-button" src="images/plus.png" alt="RQ10 details" border="0"></a></td>
+                     <td>RQ10</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">Last Name</span>The system shall store a last name against each user.
+                     </td>
+                  </tr>
+                  <tr id="d340e169-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ12">[RQ12] Names fields</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ11-div">
+                  <tr id="RQ11">
+                     <td align="center"><a href="javascript:toggle('d340e183-detail', 'd340e183-toggle-button')"><img name="d340e183-toggle-button" src="images/plus.png" alt="RQ11 details" border="0"></a></td>
+                     <td>RQ11</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">Address</span>The system shall store an address against each user.
+                     </td>
+                  </tr>
+                  <tr id="d340e183-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ12-div">
+                  <tr id="RQ12">
+                     <td align="center"><a href="javascript:toggle('d340e196-detail', 'd340e196-toggle-button')"><img name="d340e196-toggle-button" src="images/plus.png" alt="RQ12 details" border="0"></a></td>
+                     <td>RQ12</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">Names fields</span>Name fields should be at least one character in length.
+                     </td>
+                  </tr>
+                  <tr id="d340e196-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>data</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ9">[RQ9] First Name</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ10">[RQ10] Last Name</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ18-div">
+                  <tr id="RQ18">
+                     <td align="center"><a href="javascript:toggle('d340e278-detail', 'd340e278-toggle-button')"><img name="d340e278-toggle-button" src="images/plus.png" alt="RQ18 details" border="0"></a></td>
+                     <td>RQ18</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Shopping cart running total</span>The application shall calculate a running total of all the products in the shopping cart. This will not include shipping or
+                        gift wrap costs.
+                     </td>
+                  </tr>
+                  <tr id="d340e278-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ26">[RQ26] Shopping Cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ19-div">
+                  <tr id="RQ19">
+                     <td align="center"><a href="javascript:toggle('d340e291-detail', 'd340e291-toggle-button')"><img name="d340e291-toggle-button" src="images/plus.png" alt="RQ19 details" border="0"></a></td>
+                     <td>RQ19</td>
+                     <td>1.3</td>
+                     <td>MUST</td>
+                     <td><span class="property">Shopping cart default quantities</span>When products are added to the cart the system shall assume a quantity of 1 (one) is required.
+                     </td>
+                  </tr>
+                  <tr id="d340e291-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ26">[RQ26] Shopping Cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ20">[RQ20] Product already in cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ20-div">
+                  <tr id="RQ20">
+                     <td align="center"><a href="javascript:toggle('d340e304-detail', 'd340e304-toggle-button')"><img name="d340e304-toggle-button" src="images/plus.png" alt="RQ20 details" border="0"></a></td>
+                     <td>RQ20</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">Product already in cart</span>When a product that aleady exists is added to the shopping cart, the system shall increment the quantity by 1 (one).
+                     </td>
+                  </tr>
+                  <tr id="d340e304-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ19">[RQ19] Shopping cart default qua ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ21-div">
+                  <tr id="RQ21">
+                     <td align="center"><a href="javascript:toggle('d340e317-detail', 'd340e317-toggle-button')"><img name="d340e317-toggle-button" src="images/plus.png" alt="RQ21 details" border="0"></a></td>
+                     <td>RQ21</td>
+                     <td>1.14</td>
+                     <td>MUST</td>
+                     <td><span class="property">View personal demographic  information</span>The system shall allow the user to view the demographic information it holds about them.
+                     </td>
+                  </tr>
+                  <tr id="d340e317-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>gui</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ22-div">
+                  <tr id="RQ22">
+                     <td align="center"><a href="javascript:toggle('d340e334-detail', 'd340e334-toggle-button')"><img name="d340e334-toggle-button" src="images/plus.png" alt="RQ22 details" border="0"></a></td>
+                     <td>RQ22</td>
+                     <td>1.9</td>
+                     <td>MUST</td>
+                     <td><span class="property">Edit personal demographic information</span>The system shall allow the user to edit their personal demographic information.
+                     </td>
+                  </tr>
+                  <tr id="d340e334-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>gui</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ8">[RQ8] Personal Information</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC2.html">[UC2] Manage Personal Details</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#marketing">Marketing</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ25-div">
+                  <tr id="RQ25">
+                     <td align="center"><a href="javascript:toggle('d340e384-detail', 'd340e384-toggle-button')"><img name="d340e384-toggle-button" src="images/plus.png" alt="RQ25 details" border="0"></a></td>
+                     <td>RQ25</td>
+                     <td>1.5</td>
+                     <td>MUST</td>
+                     <td><span class="property">Select products for purchase</span>The system shall allow the buyer to select products for purchase
+                     </td>
+                  </tr>
+                  <tr id="d340e384-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ26-div">
+                  <tr id="RQ26">
+                     <td align="center"><a href="javascript:toggle('d340e400-detail', 'd340e400-toggle-button')"><img name="d340e400-toggle-button" src="images/plus.png" alt="RQ26 details" border="0"></a></td>
+                     <td>RQ26</td>
+                     <td>1.5</td>
+                     <td>MUST</td>
+                     <td><span class="property">Shopping Cart</span>The system shall support the concept of a user's shopping cart such that zero or more items can be stored for purchase.
+                     </td>
+                  </tr>
+                  <tr id="d340e400-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ18">[RQ18] Shopping cart running total</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ19">[RQ19] Shopping cart default qua ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ28-div">
+                  <tr id="RQ28">
+                     <td align="center"><a href="javascript:toggle('d340e538-detail', 'd340e538-toggle-button')"><img name="d340e538-toggle-button" src="images/plus.png" alt="RQ28 details" border="0"></a></td>
+                     <td>RQ28</td>
+                     <td>1.7</td>
+                     <td>MUST</td>
+                     <td><span class="property">Order tracking</span>The system shall allow orders to be tracked both buy buyers, vendors and service personnel.
+                     </td>
+                  </tr>
+                  <tr id="d340e538-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ29">[RQ29] Associate orders with buyers</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ30">[RQ30] Associate order line item ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ35">[RQ35] Order list presentation order</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ36">[RQ36] Order summary data</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#marketing">Marketing</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ29-div">
+                  <tr id="RQ29">
+                     <td align="center"><a href="javascript:toggle('d340e556-detail', 'd340e556-toggle-button')"><img name="d340e556-toggle-button" src="images/plus.png" alt="RQ29 details" border="0"></a></td>
+                     <td>RQ29</td>
+                     <td>1.11</td>
+                     <td>MUST</td>
+                     <td><span class="property">Associate orders with buyers</span>The buyer's unique username shall be associated with any order he or she places
+                     </td>
+                  </tr>
+                  <tr id="d340e556-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ28">[RQ28] Order tracking</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ30-div">
+                  <tr id="RQ30">
+                     <td align="center"><a href="javascript:toggle('d340e574-detail', 'd340e574-toggle-button')"><img name="d340e574-toggle-button" src="images/plus.png" alt="RQ30 details" border="0"></a></td>
+                     <td>RQ30</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Associate order line item with a vendor</span>The system shall associate order line items with a vendor via a unique vendor id.
+                     </td>
+                  </tr>
+                  <tr id="d340e574-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ28">[RQ28] Order tracking</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC9.html">[UC9] Manage Orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ35-div">
+                  <tr id="RQ35">
+                     <td align="center"><a href="javascript:toggle('d340e664-detail', 'd340e664-toggle-button')"><img name="d340e664-toggle-button" src="images/plus.png" alt="RQ35 details" border="0"></a></td>
+                     <td>RQ35</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Order list presentation order</span>When a user searches for orders the list should be presented with open orders first with secondary sorting being via order
+                        date in reverse chronological order (newest orders first).
+                     </td>
+                  </tr>
+                  <tr id="d340e664-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ28">[RQ28] Order tracking</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC9.html">[UC9] Manage Orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ36-div">
+                  <tr id="RQ36">
+                     <td align="center"><a href="javascript:toggle('d340e683-detail', 'd340e683-toggle-button')"><img name="d340e683-toggle-button" src="images/plus.png" alt="RQ36 details" border="0"></a></td>
+                     <td>RQ36</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Order summary data</span>The following should be displayed on the order summary list. Order date/time, order (overall) status, order price,  estimated
+                        compltetion date (if known), buyer and vendor details.
+                     </td>
+                  </tr>
+                  <tr id="d340e683-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ28">[RQ28] Order tracking</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC9.html">[UC9] Manage Orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><h3>non-functional</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="RQ6-div">
+                  <tr id="RQ6">
+                     <td align="center"><a href="javascript:toggle('d340e98-detail', 'd340e98-toggle-button')"><img name="d340e98-toggle-button" src="images/plus.png" alt="RQ6 details" border="0"></a></td>
+                     <td>RQ6
+                        <div class="annotation" onMouseOut="javascript:toggleAnnotation('d340e99', 'd340e99-button')" onMouseOver="javascript:toggleAnnotation('d340e99', 'd340e99-button')" id="d340e99-button" style="border-bottom: 1px solid #666; zIndex: auto;">
+                           <div class="annotation-header"><span class="value">odlingsmee;</span>; 2006-05-23
+                           </div>
+                           <div class="annotation-content" id="d340e99" style="display: none;"><span class="property">RQ6</span>
+                              TLS should probably be used in preference to SSL
+                              - this is still under investigation. 
+                              <div class="comments">
+                                 <div class="comment">
+                                    <div class="comment-author">fred; 2010-02-09</div>
+                                    It has been concluded that TLS should be used, however
+                                    the SSL is a term that it is familiar to the customer -
+                                    as such the requirement has not been modified. 
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td>1.1</td>
+                     <td>SHOULD</td>
+                     <td><span class="property">SSL Encryption</span>The system's website should support SSL Encryption to prevent data being sniffed by malicious parties.
+                     </td>
+                  </tr>
+                  <tr id="d340e98-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authentication</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ7-div">
+                  <tr id="RQ7">
+                     <td align="center"><a href="javascript:toggle('d340e129-detail', 'd340e129-toggle-button')"><img name="d340e129-toggle-button" src="images/plus.png" alt="RQ7 details" border="0"></a></td>
+                     <td>RQ7</td>
+                     <td>1.3</td>
+                     <td>MUST</td>
+                     <td><span class="property">Authorisation</span>The system shall store permissions against each user such that their level of access to the system can be controlled.
+                     </td>
+                  </tr>
+                  <tr id="d340e129-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authorisation</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ23">[RQ23] Role based controls</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ27">[RQ27] Permission based controls</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ13-div">
+                  <tr id="RQ13">
+                     <td align="center"><a href="javascript:toggle('d340e211-detail', 'd340e211-toggle-button')"><img name="d340e211-toggle-button" src="images/plus.png" alt="RQ13 details" border="0"></a></td>
+                     <td>RQ13</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Web UI</span>The user interface shall be a web based (HTTP) user interface to ease deployment and accesibility.
+                     </td>
+                  </tr>
+                  <tr id="d340e211-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>gui</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC1.html">[UC1] Logon</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ14-div">
+                  <tr id="RQ14">
+                     <td align="center"><a href="javascript:toggle('d340e223-detail', 'd340e223-toggle-button')"><img name="d340e223-toggle-button" src="images/plus.png" alt="RQ14 details" border="0"></a></td>
+                     <td>RQ14</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Multi-currency support</span>The application shall support multiple-currencies.
+                     </td>
+                  </tr>
+                  <tr id="d340e223-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ15">[RQ15] USD currency support</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ16">[RQ16] GBP currency support</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ17">[RQ17] Euro currency support</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ15-div">
+                  <tr id="RQ15">
+                     <td align="center"><a href="javascript:toggle('d340e235-detail', 'd340e235-toggle-button')"><img name="d340e235-toggle-button" src="images/plus.png" alt="RQ15 details" border="0"></a></td>
+                     <td>RQ15</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">USD currency support</span>The application shall support payment in USD ($).
+                     </td>
+                  </tr>
+                  <tr id="d340e235-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ14">[RQ14] Multi-currency support</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ16-div">
+                  <tr id="RQ16">
+                     <td align="center"><a href="javascript:toggle('d340e248-detail', 'd340e248-toggle-button')"><img name="d340e248-toggle-button" src="images/plus.png" alt="RQ16 details" border="0"></a></td>
+                     <td>RQ16</td>
+                     <td>1.0</td>
+                     <td>MUST</td>
+                     <td><span class="property">GBP currency support</span>The application shall support payment in GBP (£).
+                     </td>
+                  </tr>
+                  <tr id="d340e248-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ14">[RQ14] Multi-currency support</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ17-div">
+                  <tr id="RQ17">
+                     <td align="center"><a href="javascript:toggle('d340e263-detail', 'd340e263-toggle-button')"><img name="d340e263-toggle-button" src="images/plus.png" alt="RQ17 details" border="0"></a></td>
+                     <td>RQ17</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Euro currency support</span>The application shall support payment in Euro ().
+                     </td>
+                  </tr>
+                  <tr id="d340e263-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.p2p</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ14">[RQ14] Multi-currency support</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ23-div">
+                  <tr id="RQ23">
+                     <td align="center"><a href="javascript:toggle('d340e351-detail', 'd340e351-toggle-button')"><img name="d340e351-toggle-button" src="images/plus.png" alt="RQ23 details" border="0"></a></td>
+                     <td>RQ23</td>
+                     <td>1.13</td>
+                     <td>MUST</td>
+                     <td><span class="property">Role based controls</span>The system shall support roles to aid with the managment of granular permissions.
+                     </td>
+                  </tr>
+                  <tr id="d340e351-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authorisation</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ7">[RQ7] Authorisation</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ24">[RQ24] Role multiplicity</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ24-div">
+                  <tr id="RQ24">
+                     <td align="center"><a href="javascript:toggle('d340e368-detail', 'd340e368-toggle-button')"><img name="d340e368-toggle-button" src="images/plus.png" alt="RQ24 details" border="0"></a></td>
+                     <td>RQ24</td>
+                     <td>1.6</td>
+                     <td>MUST</td>
+                     <td><span class="property">Role multiplicity</span>The system shall allow a user to be associated with one or more roles. Their permissions will be the union of the permissions
+                        defined by each of their roles.
+                     </td>
+                  </tr>
+                  <tr id="d340e368-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authorisation</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ23">[RQ23] Role based controls</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ27-div">
+                  <tr id="RQ27">
+                     <td align="center"><a href="javascript:toggle('d340e416-detail', 'd340e416-toggle-button')"><img name="d340e416-toggle-button" src="images/plus.png" alt="RQ27 details" border="0"></a></td>
+                     <td>RQ27</td>
+                     <td>1.5</td>
+                     <td>MUST</td>
+                     <td><span class="property">Permission based controls</span>The system shall only allow access to functions that are associated with the permissions of the current user.
+                     </td>
+                  </tr>
+                  <tr id="d340e416-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>security.authorisation</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ7">[RQ7] Authorisation</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC6.html">[UC6] View Products</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC4.html">[UC4] Add to shopping cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC7.html">[UC7] Manage Shopping Cart</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC9.html">[UC9] Manage Orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ31-div">
+                  <tr id="RQ31">
+                     <td align="center"><a href="javascript:toggle('d340e592-detail', 'd340e592-toggle-button')"><img name="d340e592-toggle-button" src="images/plus.png" alt="RQ31 details" border="0"></a></td>
+                     <td>RQ31</td>
+                     <td>1.8</td>
+                     <td>MUST</td>
+                     <td><span class="property">Restrict list of orders</span>The system shall restrict the list of orders visible to the user such that they cannot review orders that are not associated
+                        with them.
+                     </td>
+                  </tr>
+                  <tr id="d340e592-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ28">[RQ28] Order tracking</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ32">[RQ32] Users can only see their  ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ33">[RQ33] Vendors can only see orde ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from child</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ34">[RQ34] Service personnel can vie ...</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace from</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="UC9.html">[UC9] Manage Orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ35">[RQ35] Order list presentation order</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>see also</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ36">[RQ36] Order summary data</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ32-div">
+                  <tr id="RQ32">
+                     <td align="center"><a href="javascript:toggle('d340e611-detail', 'd340e611-toggle-button')"><img name="d340e611-toggle-button" src="images/plus.png" alt="RQ32 details" border="0"></a></td>
+                     <td>RQ32</td>
+                     <td>1.7</td>
+                     <td>MUST</td>
+                     <td><span class="property">Users can only see their orders</span>Users shall only be allowed to see orders that they have placed
+                     </td>
+                  </tr>
+                  <tr id="d340e611-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-1</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ33-div">
+                  <tr id="RQ33">
+                     <td align="center"><a href="javascript:toggle('d340e628-detail', 'd340e628-toggle-button')"><img name="d340e628-toggle-button" src="images/plus.png" alt="RQ33 details" border="0"></a></td>
+                     <td>RQ33</td>
+                     <td>1.6</td>
+                     <td>MUST</td>
+                     <td><span class="property">Vendors can only see orders associated with them</span>Vendors can only see orders associated with them by virtue of having one or more line items placed with them. Should the order
+                        also contain line items placed with a different vendor, these details will not be accessible.
+                     </td>
+                  </tr>
+                  <tr id="d340e628-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="RQ34-div">
+                  <tr id="RQ34">
+                     <td align="center"><a href="javascript:toggle('d340e645-detail', 'd340e645-toggle-button')"><img name="d340e645-toggle-button" src="images/plus.png" alt="RQ34 details" border="0"></a></td>
+                     <td>RQ34</td>
+                     <td>1.7</td>
+                     <td>MUST</td>
+                     <td><span class="property">Service personnel can view all orders</span>Service personnel shall be able view all orders on the system such that can help with any support queries placed by the buyer
+                        and/or vendor.
+                     </td>
+                  </tr>
+                  <tr id="d340e645-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>non-functional</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system.orders</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>target release</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>release-2</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>trace to parent</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="requirements.html#RQ31">[RQ31] Restrict list of orders</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#service-management">Service Management</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#security">Security</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><h3>business</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="BO-1-div">
+                  <tr id="BO-1">
+                     <td align="center"><a href="javascript:toggle('d340e432-detail', 'd340e432-toggle-button')"><img name="d340e432-toggle-button" src="images/plus.png" alt="BO-1 details" border="0"></a></td>
+                     <td>BO-1</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">To Improve UK market share by upwards of 1.5%.</span>
+                        Efficiencies and improved usability must allow ACME Plc.
+                        to reach out more effectively to its customers to improve sales and customer retention. 
+                     </td>
+                  </tr>
+                  <tr id="d340e432-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>business</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>busines-drivers</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#marketing">Marketing</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="BO-2-div">
+                  <tr id="BO-2">
+                     <td align="center"><a href="javascript:toggle('d340e448-detail', 'd340e448-toggle-button')"><img name="d340e448-toggle-button" src="images/plus.png" alt="BO-2 details" border="0"></a></td>
+                     <td>BO-2</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Eliminate the need to re-key web order data thus saving 2 FTE.</span>The solution must integrate with the backend CRM system such that manual re-keying of order information is not required.
+                     </td>
+                  </tr>
+                  <tr id="d340e448-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>business</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>busines-drivers</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="BO-3-div">
+                  <tr id="BO-3">
+                     <td align="center"><a href="javascript:toggle('d340e461-detail', 'd340e461-toggle-button')"><img name="d340e461-toggle-button" src="images/plus.png" alt="BO-3 details" border="0"></a></td>
+                     <td>BO-3</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Reduce vendor management overheads by 20%.</span>
+                        Currently it is difficult for vendors that sell products via ACME Plc.
+                        to track the number and payment status of orders placed via the system. Integration with the backend CRM would not only allow
+                        them to track orders and payments made via the web sales channel but also allow them to view orders placed by phone and mail.
+                        
+                     </td>
+                  </tr>
+                  <tr id="d340e461-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>business</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>busines-drivers</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><h3>success-criteria</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="SC-1-div">
+                  <tr id="SC-1">
+                     <td align="center"><a href="javascript:toggle('d340e476-detail', 'd340e476-toggle-button')"><img name="d340e476-toggle-button" src="images/plus.png" alt="SC-1 details" border="0"></a></td>
+                     <td>SC-1</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Achieve a 50% increase in user customer satisfaction within 6 months of go-live.</span>Improve buyer customer satisfaction such that they are likely to want to use the site more.
+                     </td>
+                  </tr>
+                  <tr id="d340e476-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>success-criteria</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>busines-drivers</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#user">User</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+               <div id="SC-2-div">
+                  <tr id="SC-2">
+                     <td align="center"><a href="javascript:toggle('d340e491-detail', 'd340e491-toggle-button')"><img name="d340e491-toggle-button" src="images/plus.png" alt="SC-2 details" border="0"></a></td>
+                     <td>SC-2</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">Achieve a 25% increase in vendor customer satisfaction within 6 months of go-live.</span>
+                        Improve buyer customer satisfaction such that they are likely to continue to do business with ACME Plc.
+                        . 
+                     </td>
+                  </tr>
+                  <tr id="d340e491-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>success-criteria</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>busines-drivers</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#vendor">Vendor</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><h3>constraint</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="CO-1-div">
+                  <tr id="CO-1">
+                     <td align="center"><a href="javascript:toggle('d340e508-detail', 'd340e508-toggle-button')"><img name="d340e508-toggle-button" src="images/plus.png" alt="CO-1 details" border="0"></a></td>
+                     <td>CO-1</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">ACME Online
+                           must be built in Java
+                           </span>ACME Online
+                        must be built in Java such that it can be maintained and extended by the in-house IT department. 
+                     </td>
+                  </tr>
+                  <tr id="d340e508-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>constraint</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><h3>assumption</h3>
+         <table class="standard">
+            <thead>
+               <tr>
+                  <th width="4%"></th>
+                  <th width="6%">id</th>
+                  <th width="4%">v.</th>
+                  <th width="10%">intent</th>
+                  <th witdh="76%">title / description</th>
+               </tr>
+            </thead>
+            <tbody>
+               <div id="AS-1-div">
+                  <tr id="AS-1">
+                     <td align="center"><a href="javascript:toggle('d340e523-detail', 'd340e523-toggle-button')"><img name="d340e523-toggle-button" src="images/plus.png" alt="AS-1 details" border="0"></a></td>
+                     <td>AS-1</td>
+                     <td>1.1</td>
+                     <td>MUST</td>
+                     <td><span class="property">
+                           The new
+                           ACME Plc.
+                           corporate branding will be availble in time for release 1
+                           </span>The corporate barnding must be avaible prior to system test of release 1.
+                     </td>
+                  </tr>
+                  <tr id="d340e523-detail" style="display:none;">
+                     <td colspan="5" class="req-detail-area">
+                        <table class="req-detail-table">
+                           <tbody>
+                              <tr>
+                                 <td class="property">
+                                    <property>type</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>assumption</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>status</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>proposed</value>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="property">
+                                    <property>package</property>
+                                 </td>
+                                 <td class="value">
+                                    <value>system</value>
+                                 </td>
+                              </tr>
+                              <tr class="last-row">
+                                 <td class="property">
+                                    <property>stakeholder</property>
+                                 </td>
+                                 <td class="value">
+                                    <value><a href="stakeholders.html#management">Corporate Management</a></value>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+               </div>
+            </tbody>
+         </table><br><div id="footer">documentation generated by <a href="http://xuse.sourceforge.net">Xuse (http://xuse.sourceforge.net)</a>: 31 Dec 2011 10:30:54 +10:30
+         </div>
+      </div>
+   </body>
+</html>

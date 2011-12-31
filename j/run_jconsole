@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "to move to next lab you can use:    labnext_jlab_ ''
+
+cd $HOME/git/mycode/j
+$HOME/j701/bin/jconsole ~/git/mycode/j/linuxinit.ijs

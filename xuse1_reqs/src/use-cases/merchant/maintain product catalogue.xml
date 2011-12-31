@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xuse:use-case
+		xmlns:xuse="http://xuse.sourceforge.net"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xuse.sourceforge.net ../../../xusexsds/use-case.xsd"
+	    id="UC8" name="Maintain Product Catalogue" model-version="0.3">	
+	<xuse:description>The merchant wishes to update their product catalogue. They may wish to add, delete or update items within the catalogue. Updates might include changes to descriptions, prices (such as special offers) or a change to the delivery options that can be supported.</xuse:description>
+	<xuse:document-history current-version="$Revision: 1.2 $">
+		<xuse:version>
+			<xuse:revision>1.1</xuse:revision>
+			<xuse:author>odlingsmee</xuse:author>
+			<xuse:change-date>2009-09-20</xuse:change-date>
+			<xuse:description>Initial Revision</xuse:description>
+		</xuse:version>
+		<xuse:version>
+            <xuse:revision>1.2</xuse:revision>
+            <xuse:author>odlingsmee</xuse:author>
+            <xuse:change-date>2009-11-10</xuse:change-date>
+            <xuse:description>Added description</xuse:description>
+        </xuse:version>
+	</xuse:document-history>
+    <xuse:use-case-properties>
+        <xuse:trigger>A merchant wishes to review recent sales on the system.</xuse:trigger>
+		<xuse:goal>To review the volume / value of sales of the merchants products.</xuse:goal>
+		<xuse:primary-actor refId="merchant"/>
+		<xuse:pre-requisites>The merchant shall be <xuse:uc-ref refId="UC1">logged on</xuse:uc-ref> and registered as a merchant.</xuse:pre-requisites>
+		<xuse:success-outcome>The merchant will have been able to view (and print) the volume / value of sales for the period they were interested in.</xuse:success-outcome>
+		<xuse:failure-outcome>The merchant will not have been able to access the sales reports - the system will have generated error messages and advice as to the appropriate recourse should they wish to obtain the details immediately.</xuse:failure-outcome>
+		<xuse:priority>2</xuse:priority>
+		<xuse:complexity>3</xuse:complexity>
+	</xuse:use-case-properties>
+	<xuse:main-flow>		
+        <xuse:step step-id="todo">
+            <xuse:description>todo</xuse:description>
+        </xuse:step>
+		<xuse:end/>
+	</xuse:main-flow>
+</xuse:use-case>
