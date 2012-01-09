@@ -1,3 +1,0 @@
-/* Input method to read from keyboard */
-(input)
-(* 7 5)  /* result should now be printed */

@@ -1,0 +1,6 @@
+trades:([] sym:(); ex:(); time:(); price:())
+`trades insert (`IBM;`N; 12:10:00.0; 82.1)
+`trades insert (`IBM;`O; 12:30:00.0; 81.95)
+`trades insert (`MSFT;`N; 12:45:00.0; 23.45)
+`trades insert (`IBM;`N; 12:50:00.0; 82.05)
+`trades insert (`MSFT;`N; 13:30:00.0; 23.40)
