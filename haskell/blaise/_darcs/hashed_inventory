@@ -1,0 +1,52 @@
+pristine:0000000278-d936555d64f83a7da5202dfda09cc5782d2323be9cfa9746a7fe95a37b3e753f
+[Initial checkin
+coffeemug@gmail.com**20060818225420] 
+hash: 0000001646-0a287709a099715266c0830032aa23d9e17ee4ef6e8e17300f8316951653811b
+[Added a parser
+coffeemug@gmail.com**20060822041037] 
+hash: 0000002249-519c5df608ddf6894d8c97bb32f8df353dd96d185b926f9215092cff0f937407
+[Implemented full parser
+coffeemug@gmail.com**20060823011926] 
+hash: 0000002869-31e999e1fd31fa3b7de0c9b36c834b6fbf73cefe30af1831ef5b448982036d46
+[A working repl
+coffeemug@gmail.com**20060823034328] 
+hash: 0000002365-61255c96350b8f0f01ed029a1996ba785750d9c4061f0603ba0673e0db95ae7b
+[Progress towards a working context
+coffeemug@gmail.com**20060824044220] 
+hash: 0000002390-80f286541dba8431be7f130bdeec47d742fe1e3135d42394001752a56343afe1
+[Added full support for variables
+coffeemug@gmail.com**20060825035811] 
+hash: 0000002107-d5369afb47f369a9993410511c9dbc0d8ade0c901706362c203fcb15b94711b4
+[Removed unnecessary comment
+coffeemug@gmail.com**20060826000241] 
+hash: 0000000142-31ea5154f228227c2286b9f306548f22915152a335aad7a46b603c31c2a24d0a
+[Restructured to use State monad
+coffeemug@gmail.com**20060828002413] 
+hash: 0000002941-8c3b5a70f67557c725ee79f5b816dd18c1bc3c59a9c066a9b1c98b1e8feeb005
+[Added error handling support
+coffeemug@gmail.com**20060913004519] 
+hash: 0000001411-3e529c83fd2d39283f75180c4f6195a94cd0bc5a8d18b078058d36fcd697b84c
+[Implemented an if statement
+coffeemug@gmail.com**20060913183706] 
+hash: 0000000614-df042e89b73d08b4505ca456ca0dd98b2b84ca5dc37da63781570ee6d9a90697
+[Cosmetic change
+coffeemug@gmail.com**20060914001222] 
+hash: 0000000200-624d5ab1b330eefd98a6c4058753eaf45f03a94e013cbadae929eefe95a46ac4
+[Added support for hierarchial contexts in preperation for implementing functions
+coffeemug@gmail.com**20060914020922] 
+hash: 0000001613-a07199e778959c60f7770bfee171fe63a07323d225eabf6b97e7bf7cf1fbf3ab
+[More changes in order to support user defined functions
+coffeemug@gmail.com**20060923035839] 
+hash: 0000003242-fece3c4af04263d4a1ee3068de404c82ce6209b4d5e3baefa52ca2ceefda37a6
+[Added support for user defined functions
+coffeemug@gmail.com**20060924204629] 
+hash: 0000003778-a0cc634f4b5f9189568100193031e835938ebe3e6f803d9fd733021237e4a7b1
+[Changed to earlier parsec version in order to work in earlier ghc
+coffeemug@gmail.com**20060927025149] 
+hash: 0000000233-0313578b5657ed0769c8e7ee8dae497c7fdbdf2a74eb03ee6ad6fb6c11d0ce07
+[more updates to work with earlier ghc
+coffeemug@gmail.com**20060927030308] 
+hash: 0000000585-15492d89c36b9067b1f0717985de9bbe704047e232a80ed631b052c2a4b93f50
+[Fix build file.
+cj@syntheticplayground.com**20061227020901] 
+hash: 0000000256-9d65f55b0452b4df3b70b8aba0393bb123ba4b8fff519d443818908db8f12d4c

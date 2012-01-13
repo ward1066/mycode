@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ $# -lt 1 ]
+then
+        echo "Usage : $0 Filename.Ext"
+        exit
+fi
+
+filepath=$1
+filename=`basename "$1"`
+echo filepath = $filepath
+echo filename = $filename
+
+#filepath should be set to the name(with optional path) of the file in question
+ ext=${filepath##*\.}
+
+case "$ext" in
+        lua) echo "$filename : Lua source file"
+           /usr/bin/lua $filename
+           ;;
+        emacs) echo "$filename : emacs file"
+           /usr/bin/less $filename
+           ;;
+        sh) echo "$filename : Shell script"
+            ;;
+        txt) echo "$filename : Text file"
+             ;;
+        *) echo " $filename : Not processed"
+           ;;
+esac

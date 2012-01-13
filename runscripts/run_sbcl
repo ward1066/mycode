@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/git/mycode/sbcl
+rlwrap /usr/local/bin/sbcl  "$@"
