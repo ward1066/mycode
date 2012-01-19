@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $HOME/git/mycode/q
+rlwrap /home/adminuser/q/l32/q -c 20 160 "$@"
+

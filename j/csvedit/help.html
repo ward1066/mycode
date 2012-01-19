@@ -1,0 +1,103 @@
+<html><head>
+	<title>Help - CSV Editor</title>
+</head><body>
+
+<h2>CSV Editor using Grid Control
+</h2>
+<blockquote>
+	<p>(C) 2006 Oleg Kobchenko</p>
+</blockquote>
+<h2>Overview</h2>
+<p>CSV Editor is a utility application that allows to edit CSV files. There is a 
+specific CSV file format convention described below. For more information about 
+using the grid controls, such as keyboard and mouse, see Using Grid in the Help 
+menu.</p>
+<h2>Getting Started</h2>
+<dl>
+	<dt>Install</dt>
+	<dd>copy to <code>user/csvedit</code></dd>
+	<dt>Run</dt>
+	<dd><code>load &#39;~user/csvedit/csvedit.ijs&#39;</code></dd>
+</dl>
+
+<h2>Screen Layout</h2>
+<dl>
+	<dt>Title bar</dt>
+	<dd>Contains current file name or Untitled for a new grid. Asterisk after 
+	the file name means changes are pending.</dd>
+	<dt>Menu</dt>
+	<dd>Contains application specific operations other than standard grid 
+	commands.</dd>
+	<dt>Grid area </dt>
+	<dd>Consists of numeric cells for data and column and row headers</dd>
+	<dt>Status Bar</dt>
+	<dd>Indicates current selection in the zero-based format: Column Row 
+	[Initial-Column Initial-Row]</dd>
+</dl>
+<h2>File Operations</h2>
+<p>Before the content of the current window is replaced with open file or 
+cleared, user is asked to save any pending changes.</p>
+<dl>
+	<dt>Creating a CSV file</dt>
+	<dd>Running CSV Editor starts with a blank grid, which can be saved into a 
+	new file. Menu File|New clears current grid, menu File|New Window creates a 
+	new blank window.</dd>
+	<dt>Opening a File</dt>
+	<dd>Menu File|Open Ctrl+O will read a CSV file into the current window.</dd>
+	<dt>Saving a File</dt>
+	<dd>Menu File|Save, File|Save As will save current grid into a CSV file</dd>
+	<dt>Closing a File</dt>
+	<dd>Menu File|Close closes current window, or exits the application, if it 
+	is the last window.</dd>
+</dl>
+<h2>Grid Operations</h2>
+<p>Grid headers, if not present are defaulted to A,B,... for columns and 1,2,... 
+for rows.</p>
+<dl>
+	<dt>Selecting Cells</dt>
+	<dd>Cells are selected by dragging the mouse or Shift+Arrow keys. Whole 
+	column or row is selected by clicking a header cell.</dd>
+	<dt>Editing Cells</dt>
+	<dd>Editing in data area is restricted to numeric values. Headers are 
+	character values. Editing commands are according to Help|Using Grid.</dd>
+	<dt>Missing Values</dt>
+	<dd>Currently the blank value is 0 only.</dd>
+	<dt>Inserting and Deleting Rows and Columns</dt>
+	<dd>Menu Edit has operations to insert or delete rows or columns. Current 
+	selection determined affected rows and columns, that is they do not have to 
+	be selected completely.</dd>
+	<dt>Editing Headers</dt>
+	<dd>Menu Edit|Headers switches to editing headers, where they become regular 
+	cells.</dd>
+	<dt>Flipping</dt>
+	<dd>Menu Edit|Flip transposes both the data and the headers. Can be useful 
+	for plots.</dd>
+</dl>
+<h2>Viewing Data</h2>
+<dl>
+	<dt>CSV</dt>
+	<dd>Shows the format of the resulting CSV file</dd>
+	<dt>Viewmat</dt>
+	<dd>Shows viewmat of the current data</dd>
+	<dt>Plot</dt>
+	<dd>Show line plot of the current data</dd>
+</dl>
+<h2>CSV Format</h2>
+<p>For all practical purposes, the choice of presence of headers is replaced 
+with a heuristic discovery based on the following rules</p>
+<ul>
+	<li>If top-left cell is blank then both headers are present</li>
+	<li>If top-left cell is numeric then there are no headers</li>
+	<li>If top-second-left cell is numeric then there are only row headers</li>
+	<li>If second-top-left cell is numeric then there are only columns headers</li>
+	<li>Otherwise an error is signaled</li>
+</ul>
+<p>Parsing is done using CSV J package, which uses comma as a separator and 
+supports quotes (&quot;) around any cells. While saving format uses quotes only when 
+necessary: around cells containing a comma. Quotes in cells are represented as 
+double quotes.</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

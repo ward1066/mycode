@@ -2,7 +2,7 @@ load 'csv'
 NB. load 'tables/csv'
 
 NB. read in the data
-alldata=:readcsv '/home/cw/Dropbox/data/ResourceSheet.csv'
+alldata=:readcsv 'data/ResourceSheet.csv'
 
 NB. read in the data
 header_data=:readcsv '/home/cw/Dropbox/data/ResourceSheet.csv'

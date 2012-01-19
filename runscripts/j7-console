@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $HOME/git/mycode/j
+rlwrap /home/adminuser/j701/bin/jconsole "$@"
+

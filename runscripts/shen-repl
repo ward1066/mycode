@@ -1,0 +1,4 @@
+#!/bin/bash
+cd $HOME/git/mycode/shen
+rlwrap ~/Shen/shen "$@"
+
