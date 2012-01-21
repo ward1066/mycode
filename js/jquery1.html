@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JQuery Demo</title>
+    <style>
+      a.test { font-weight: bold; }
+    </style>
+  </head>
+  <body>
+
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="/usr/share/javascript/jquery/jquery.js"></script>
+
+    <script>
+    $(document).ready(function(){
+       $("a").addClass("test");
+       $("a").click(function(event){
+         event.preventDefault();
+         $(this).hide("slow");
+       });
+     });
+    </script>
+  </body>
+</html>
